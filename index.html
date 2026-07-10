@@ -3,27 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Happy Club – A premium tea community where every cup brings people together. Join our friendly group of tea lovers." />
+  <meta name="description" content="Happy Club – A premium tea community where every cup brings people together." />
   <meta name="keywords" content="Happy Club, tea group, community, friendship, tea lovers" />
   <meta name="author" content="Happy Club" />
   <title>Happy Club – Where Every Cup Brings People Together</title>
-  <!-- Add this line to set your tab icon -->
-  <link rel="icon" type="image/png" href="hc.png">
 
-  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="hc.png">
 
   <style>
     /* ============================================================
        CSS RESET & ROOT VARIABLES
     ============================================================ */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
     :root {
       --bg: #FFFFFF;
@@ -34,22 +28,18 @@
       --border: #E5E7EB;
       --card-bg: #FFFFFF;
       --section-bg: #F9FAFB;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
-      --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
-      --shadow-lg: 0 10px 40px rgba(0,0,0,0.10), 0 4px 12px rgba(0,0,0,0.05);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08),0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08),0 2px 6px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,0.10),0 4px 12px rgba(0,0,0,0.05);
       --radius-sm: 10px;
       --radius-md: 16px;
       --radius-lg: 24px;
-      --radius-xl: 32px;
-      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      --font: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      --transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
       --header-h: 72px;
     }
 
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
+    html { scroll-behavior:smooth; font-size:16px; }
 
     body {
       font-family: var(--font);
@@ -57,1344 +47,1016 @@
       color: var(--text-primary);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    ul { list-style: none; }
+    img { max-width:100%; display:block; }
+    a { text-decoration:none; color:inherit; }
+    ul { list-style:none; }
 
     /* ============================================================
-       UTILITY CLASSES
+       UTILITIES
     ============================================================ */
-    .container {
-      width: 100%;
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .section {
-      padding: 96px 0;
-    }
-
-    .section-alt {
-      background: var(--section-bg);
-    }
+    .container { width:100%; max-width:1180px; margin:0 auto; padding:0 24px; }
+    .section { padding:96px 0; }
+    .section-alt { background:var(--section-bg); }
 
     .section-label {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--primary-btn);
-      background: rgba(37,99,235,0.07);
-      padding: 6px 14px;
-      border-radius: 50px;
-      margin-bottom: 16px;
+      display:inline-block;
+      font-size:0.75rem; font-weight:600;
+      letter-spacing:0.12em; text-transform:uppercase;
+      color:var(--primary-btn);
+      background:rgba(37,99,235,0.07);
+      padding:6px 14px; border-radius:50px;
+      margin-bottom:16px;
     }
 
     .section-title {
-      font-size: clamp(1.75rem, 4vw, 2.6rem);
-      font-weight: 800;
-      color: var(--text-primary);
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-      margin-bottom: 14px;
+      font-size:clamp(1.75rem,4vw,2.6rem);
+      font-weight:800; color:var(--text-primary);
+      line-height:1.2; letter-spacing:-0.02em; margin-bottom:14px;
     }
 
     .section-subtitle {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      max-width: 560px;
-      line-height: 1.75;
+      font-size:1.05rem; color:var(--text-secondary);
+      max-width:560px; line-height:1.75;
     }
 
-    .section-header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .section-header .section-subtitle {
-      margin: 0 auto;
-    }
+    .section-header { text-align:center; margin-bottom:60px; }
+    .section-header .section-subtitle { margin:0 auto; }
 
     /* ============================================================
        BUTTONS
     ============================================================ */
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 13px 28px;
-      border-radius: 50px;
-      font-family: var(--font);
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      border: none;
-      transition: var(--transition);
-      text-decoration: none;
-      letter-spacing: -0.01em;
+      display:inline-flex; align-items:center; gap:8px;
+      padding:13px 28px; border-radius:50px;
+      font-family:var(--font); font-size:0.95rem; font-weight:600;
+      cursor:pointer; border:none;
+      transition:var(--transition); text-decoration:none;
+      letter-spacing:-0.01em;
     }
 
     .btn-primary {
-      background: var(--primary-btn);
-      color: #fff;
-      box-shadow: 0 4px 14px rgba(37,99,235,0.30);
+      background:var(--primary-btn); color:#fff;
+      box-shadow:0 4px 14px rgba(37,99,235,0.30);
     }
-
     .btn-primary:hover {
-      background: var(--btn-hover);
-      box-shadow: 0 6px 20px rgba(37,99,235,0.38);
-      transform: translateY(-1px);
-    }
-
-    .btn-primary:active {
-      transform: translateY(0);
+      background:var(--btn-hover);
+      box-shadow:0 6px 20px rgba(37,99,235,0.38);
+      transform:translateY(-1px);
     }
 
     .btn-outline {
-      background: transparent;
-      color: var(--text-primary);
-      border: 1.5px solid var(--border);
-      box-shadow: var(--shadow-sm);
+      background:transparent; color:var(--text-primary);
+      border:1.5px solid var(--border); box-shadow:var(--shadow-sm);
     }
-
     .btn-outline:hover {
-      border-color: #c0c8d4;
-      background: var(--section-bg);
-      transform: translateY(-1px);
+      border-color:#c0c8d4; background:var(--section-bg);
+      transform:translateY(-1px);
     }
 
+    /* WhatsApp button */
     .btn-whatsapp {
-      background: #25D366;
-      color: #fff;
-      font-size: 0.875rem;
-      padding: 10px 20px;
-      box-shadow: 0 4px 14px rgba(37,211,102,0.28);
-      width: 100%;
-      justify-content: center;
+      background:#25D366; color:#fff;
+      font-size:0.875rem; padding:11px 20px;
+      box-shadow:0 4px 14px rgba(37,211,102,0.28);
+      width:100%; justify-content:center; border-radius:50px;
+      font-weight:600; cursor:pointer; border:none;
+      font-family:var(--font); letter-spacing:-0.01em;
+      transition:var(--transition);
     }
-
     .btn-whatsapp:hover {
-      background: #1da851;
-      box-shadow: 0 6px 20px rgba(37,211,102,0.36);
-      transform: translateY(-1px);
+      background:#1da851;
+      box-shadow:0 6px 20px rgba(37,211,102,0.36);
+      transform:translateY(-2px);
+    }
+    .btn-whatsapp:active { transform:translateY(0); }
+
+    .btn-cancel {
+      background:var(--section-bg); color:var(--text-secondary);
+      border:1.5px solid var(--border);
+    }
+    .btn-cancel:hover {
+      background:var(--border); color:var(--text-primary);
+      transform:translateY(-1px);
     }
 
     /* ============================================================
-       SCROLL FADE-IN ANIMATION
+       FADE-IN ANIMATION
     ============================================================ */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .fade-in { opacity:0; transform:translateY(22px); transition:opacity 0.55s ease,transform 0.55s ease; }
+    .fade-in.visible { opacity:1; transform:translateY(0); }
 
     /* ============================================================
        HEADER
     ============================================================ */
     #header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: var(--header-h);
-      background: rgba(255,255,255,0.88);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(229,231,235,0.6);
-      z-index: 1000;
-      transition: var(--transition);
+      position:fixed; top:0; left:0; width:100%;
+      height:var(--header-h);
+      background:rgba(255,255,255,0.88);
+      backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(229,231,235,0.6);
+      z-index:1000; transition:var(--transition);
     }
-
-    #header.scrolled {
-      box-shadow: 0 2px 20px rgba(0,0,0,0.07);
-    }
+    #header.scrolled { box-shadow:0 2px 20px rgba(0,0,0,0.07); }
 
     .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: var(--header-h);
+      display:flex; align-items:center;
+      justify-content:space-between; height:var(--header-h);
     }
 
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
+    .logo-wrap { display:flex; align-items:center; gap:10px; }
 
     .logo-img {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      object-fit: cover;
-      background: linear-gradient(135deg,#2563EB,#60a5fa);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
+      width:38px; height:38px; border-radius:10px;
+      background:linear-gradient(135deg,#2563EB,#60a5fa);
+      display:flex; align-items:center; justify-content:center;
+      flex-shrink:0; overflow:hidden;
     }
-
-    .logo-img img {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      object-fit: cover;
-    }
+    .logo-img img { width:38px; height:38px; border-radius:10px; object-fit:cover; }
 
     .logo-fallback {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: linear-gradient(135deg,#2563EB,#60a5fa);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 1.1rem;
-      font-weight: 800;
-      flex-shrink: 0;
+      width:38px; height:38px; border-radius:10px;
+      background:linear-gradient(135deg,#2563EB,#60a5fa);
+      display:flex; align-items:center; justify-content:center;
+      color:#fff; font-size:1.1rem; font-weight:800;
     }
 
-    .logo-text {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: var(--text-primary);
-      letter-spacing: -0.02em;
-    }
+    .logo-text { font-size:1.15rem; font-weight:800; color:var(--text-primary); letter-spacing:-0.02em; }
 
-    /* Desktop Nav */
-    .nav-desktop {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
+    .nav-desktop { display:flex; align-items:center; gap:6px; }
     .nav-desktop a {
-      position: relative;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      padding: 8px 14px;
-      border-radius: 8px;
-      transition: var(--transition);
+      position:relative; font-size:0.9rem; font-weight:500;
+      color:var(--text-secondary); padding:8px 14px;
+      border-radius:8px; transition:var(--transition);
     }
-
     .nav-desktop a::after {
-      content: '';
-      position: absolute;
-      bottom: 4px;
-      left: 14px;
-      right: 14px;
-      height: 2px;
-      background: var(--primary-btn);
-      border-radius: 2px;
-      transform: scaleX(0);
-      transition: transform 0.22s ease;
+      content:''; position:absolute; bottom:4px; left:14px; right:14px;
+      height:2px; background:var(--primary-btn); border-radius:2px;
+      transform:scaleX(0); transition:transform 0.22s ease;
     }
+    .nav-desktop a:hover { color:var(--text-primary); }
+    .nav-desktop a:hover::after, .nav-desktop a.active::after { transform:scaleX(1); }
+    .nav-desktop a.active { color:var(--primary-btn); }
 
-    .nav-desktop a:hover {
-      color: var(--text-primary);
-    }
-
-    .nav-desktop a:hover::after {
-      transform: scaleX(1);
-    }
-
-    .nav-desktop a.active {
-      color: var(--primary-btn);
-    }
-
-    .nav-desktop a.active::after {
-      transform: scaleX(1);
-    }
-
-    /* Hamburger */
     .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 8px;
-      border-radius: 8px;
-      border: none;
-      background: transparent;
-      transition: var(--transition);
+      display:none; flex-direction:column; gap:5px;
+      cursor:pointer; padding:8px; border-radius:8px;
+      border:none; background:transparent; transition:var(--transition);
     }
-
-    .hamburger:hover { background: var(--section-bg); }
-
+    .hamburger:hover { background:var(--section-bg); }
     .hamburger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--text-primary);
-      border-radius: 2px;
-      transition: var(--transition);
+      display:block; width:22px; height:2px;
+      background:var(--text-primary); border-radius:2px;
+      transition:var(--transition);
     }
+    .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
 
-    .hamburger.open span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
-    .hamburger.open span:nth-child(2) {
-      opacity: 0;
-      transform: scaleX(0);
-    }
-    .hamburger.open span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-    }
-
-    /* Mobile Nav */
     .nav-mobile {
-      position: fixed;
-      top: var(--header-h);
-      left: 0;
-      width: 100%;
-      background: rgba(255,255,255,0.97);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border);
-      padding: 16px 24px 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      transform: translateY(-8px);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.22s ease, transform 0.22s ease;
-      z-index: 999;
+      position:fixed; top:var(--header-h); left:0; width:100%;
+      background:rgba(255,255,255,0.97); backdrop-filter:blur(18px);
+      border-bottom:1px solid var(--border);
+      padding:16px 24px 24px;
+      display:flex; flex-direction:column; gap:4px;
+      transform:translateY(-8px); opacity:0;
+      pointer-events:none; transition:opacity 0.22s ease,transform 0.22s ease;
+      z-index:999;
     }
-
-    .nav-mobile.open {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: all;
-    }
-
+    .nav-mobile.open { opacity:1; transform:translateY(0); pointer-events:all; }
     .nav-mobile a {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      padding: 13px 16px;
-      border-radius: 10px;
-      transition: var(--transition);
+      font-size:1rem; font-weight:500; color:var(--text-secondary);
+      padding:13px 16px; border-radius:10px; transition:var(--transition);
     }
-
-    .nav-mobile a:hover {
-      color: var(--text-primary);
-      background: var(--section-bg);
-    }
+    .nav-mobile a:hover { color:var(--text-primary); background:var(--section-bg); }
 
     /* ============================================================
-       HERO SECTION
+       HERO
     ============================================================ */
     #home {
-      padding-top: calc(var(--header-h) + 72px);
-      padding-bottom: 80px;
-      position: relative;
-      overflow: hidden;
+      padding-top:calc(var(--header-h) + 72px); padding-bottom:80px;
+      position:relative; overflow:hidden;
     }
-
-    /* Decorative blobs */
     #home::before {
-      content: '';
-      position: absolute;
-      top: -120px;
-      right: -160px;
-      width: 560px;
-      height: 560px;
-      background: radial-gradient(circle, rgba(37,99,235,0.07) 0%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
+      content:''; position:absolute; top:-120px; right:-160px;
+      width:560px; height:560px;
+      background:radial-gradient(circle,rgba(37,99,235,0.07) 0%,transparent 70%);
+      border-radius:50%; pointer-events:none;
     }
-
     #home::after {
-      content: '';
-      position: absolute;
-      bottom: -80px;
-      left: -120px;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(96,165,250,0.06) 0%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
+      content:''; position:absolute; bottom:-80px; left:-120px;
+      width:400px; height:400px;
+      background:radial-gradient(circle,rgba(96,165,250,0.06) 0%,transparent 70%);
+      border-radius:50%; pointer-events:none;
     }
 
     .hero-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      z-index: 1;
+      display:flex; flex-direction:column;
+      align-items:center; text-align:center; position:relative; z-index:1;
     }
 
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(37,99,235,0.06);
-      border: 1px solid rgba(37,99,235,0.15);
-      border-radius: 50px;
-      padding: 6px 16px 6px 10px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--primary-btn);
-      margin-bottom: 28px;
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(37,99,235,0.06);
+      border:1px solid rgba(37,99,235,0.15);
+      border-radius:50px; padding:6px 16px 6px 10px;
+      font-size:0.82rem; font-weight:600; color:var(--primary-btn);
+      margin-bottom:28px;
     }
-
     .hero-badge .dot {
-      width: 7px;
-      height: 7px;
-      background: #22c55e;
-      border-radius: 50%;
-      animation: pulse 2s infinite;
+      width:7px; height:7px; background:#22c55e;
+      border-radius:50%; animation:pulse 2s infinite;
     }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
+    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
 
     .hero-title {
-      font-size: clamp(2.4rem, 7vw, 4.2rem);
-      font-weight: 900;
-      color: var(--text-primary);
-      line-height: 1.08;
-      letter-spacing: -0.035em;
-      margin-bottom: 20px;
-      max-width: 760px;
+      font-size:clamp(2.4rem,7vw,4.2rem); font-weight:900;
+      color:var(--text-primary); line-height:1.08;
+      letter-spacing:-0.035em; margin-bottom:20px; max-width:760px;
+    }
+    .hero-title span {
+      background:linear-gradient(135deg,#2563EB 0%,#60a5fa 100%);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      background-clip:text;
     }
 
-    .hero-title span {
-      background: linear-gradient(135deg, #2563EB 0%, #60a5fa 100%);
+    .hero-tagline {
+      font-size:clamp(1.1rem,2.5vw,1.35rem); font-weight:500;
+      color:var(--text-secondary); margin-bottom:22px; letter-spacing:-0.01em;
+    }
+
+    .hero-description {
+      font-size:1rem; color:var(--text-secondary);
+      max-width:620px; line-height:1.8; margin-bottom:40px;
+    }
+
+    .hero-buttons {
+      display:flex; gap:12px; flex-wrap:wrap;
+      justify-content:center; margin-bottom:72px;
+    }
+
+    .stats-grid {
+      display:grid; grid-template-columns:repeat(4,1fr);
+      gap:16px; width:100%; max-width:860px;
+    }
+    .stat-card {
+      background:var(--card-bg); border:1px solid var(--border);
+      border-radius:var(--radius-md); padding:28px 20px;
+      text-align:center; box-shadow:var(--shadow-md);
+      transition:var(--transition); position:relative; overflow:hidden;
+    }
+    .stat-card::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:3px;
+      background:linear-gradient(90deg,#2563EB,#60a5fa);
+      border-radius:3px 3px 0 0;
+    }
+    .stat-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+    .stat-icon { font-size:1.8rem; margin-bottom:12px; }
+    .stat-value { font-size:1.6rem; font-weight:800; color:var(--text-primary); letter-spacing:-0.03em; margin-bottom:5px; }
+    .stat-label { font-size:0.82rem; font-weight:500; color:var(--text-secondary); }
+
+    /* ============================================================
+       TEAM
+    ============================================================ */
+    #team { background:var(--section-bg); }
+
+    .members-grid {
+      display:grid; grid-template-columns:repeat(4,1fr); gap:22px;
+    }
+
+    .members-slider-wrap { display:none; position:relative; }
+    .members-slider { overflow:hidden; border-radius:var(--radius-md); }
+    .slider-track {
+      display:flex;
+      transition:transform 0.38s cubic-bezier(0.4,0,0.2,1);
+      will-change:transform;
+    }
+    .slider-track .member-card { min-width:100%; flex-shrink:0; }
+
+    .slider-controls {
+      display:flex; align-items:center;
+      justify-content:center; gap:16px; margin-top:24px;
+    }
+    .slider-btn {
+      width:42px; height:42px; border-radius:50%;
+      border:1.5px solid var(--border); background:#fff;
+      display:flex; align-items:center; justify-content:center;
+      cursor:pointer; transition:var(--transition);
+      box-shadow:var(--shadow-sm); font-size:1rem; color:var(--text-secondary);
+    }
+    .slider-btn:hover {
+      background:var(--primary-btn); color:#fff;
+      border-color:var(--primary-btn);
+      box-shadow:0 4px 14px rgba(37,99,235,0.28);
+    }
+    .slider-dots { display:flex; gap:7px; }
+    .slider-dot {
+      width:7px; height:7px; border-radius:50%;
+      background:var(--border); cursor:pointer; transition:var(--transition);
+      border:none;
+    }
+    .slider-dot.active { background:var(--primary-btn); width:20px; border-radius:4px; }
+
+    /* ---- Member Card ---- */
+    .member-card {
+      background:var(--card-bg); border:1px solid var(--border);
+      border-radius:var(--radius-md); padding:28px 22px 24px;
+      display:flex; flex-direction:column; align-items:center;
+      text-align:center; box-shadow:var(--shadow-md);
+      transition:var(--transition); position:relative;
+    }
+    .member-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
+
+    .member-number-badge {
+      position:absolute; top:16px; left:16px;
+      font-size:0.72rem; font-weight:700;
+      color:var(--primary-btn); background:rgba(37,99,235,0.08);
+      padding:3px 10px; border-radius:50px; letter-spacing:0.04em;
+    }
+
+    .member-avatar-wrap { position:relative; margin-bottom:16px; margin-top:8px; }
+    .member-avatar {
+      width:84px; height:84px; border-radius:50%; object-fit:cover;
+      border:3px solid #fff;
+      box-shadow:0 0 0 3px rgba(37,99,235,0.15),var(--shadow-sm);
+      background:linear-gradient(135deg,#dbeafe,#eff6ff);
+    }
+    .avatar-fallback {
+      width:84px; height:84px; border-radius:50%;
+      background:linear-gradient(135deg,#2563EB,#60a5fa);
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.6rem; font-weight:800; color:#fff;
+      border:3px solid #fff;
+      box-shadow:0 0 0 3px rgba(37,99,235,0.15),var(--shadow-sm);
+    }
+
+    .member-name { font-size:1rem; font-weight:700; color:var(--text-primary); margin-bottom:4px; letter-spacing:-0.01em; }
+
+    .member-meta { display:flex; gap:10px; justify-content:center; margin-bottom:12px; }
+    .meta-chip {
+      font-size:0.73rem; font-weight:600; color:var(--text-secondary);
+      background:var(--section-bg); border:1px solid var(--border);
+      padding:3px 10px; border-radius:50px;
+    }
+
+    .member-signature-label {
+      font-size:0.72rem; font-weight:500; color:var(--text-secondary);
+      text-transform:uppercase; letter-spacing:0.08em; margin-bottom:3px;
+    }
+    .member-signature {
+      font-size:0.92rem; font-weight:600; color:var(--text-primary);
+      font-style:italic; margin-bottom:18px;
+    }
+
+    .member-divider { width:100%; height:1px; background:var(--border); margin-bottom:16px; }
+
+    /* ============================================================
+       WHATSAPP BUTTON + MESSAGE PREVIEW TOOLTIP
+    ============================================================ */
+    .wa-btn-wrap { width:100%; position:relative; }
+
+    /* Tooltip bubble shown on hover (desktop) */
+    .wa-tooltip {
+      position:absolute;
+      bottom:calc(100% + 10px);
+      left:50%;
+      transform:translateX(-50%) translateY(4px);
+      width:260px;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:14px 16px;
+      box-shadow:var(--shadow-lg);
+      opacity:0;
+      pointer-events:none;
+      transition:opacity 0.2s ease, transform 0.2s ease;
+      z-index:100;
+      text-align:left;
+    }
+    /* Arrow */
+    .wa-tooltip::after {
+      content:'';
+      position:absolute;
+      top:100%; left:50%; transform:translateX(-50%);
+      border:7px solid transparent;
+      border-top-color:#fff;
+    }
+    .wa-tooltip::before {
+      content:'';
+      position:absolute;
+      top:100%; left:50%; transform:translateX(-50%);
+      border:8px solid transparent;
+      border-top-color:var(--border);
+      margin-top:1px;
+    }
+    /* Show tooltip on hover – desktop only */
+    @media (hover:hover) {
+      .wa-btn-wrap:hover .wa-tooltip { opacity:1; transform:translateX(-50%) translateY(0); }
+    }
+
+    .wa-tooltip-label {
+      font-size:0.67rem; font-weight:700;
+      letter-spacing:0.1em; text-transform:uppercase;
+      color:#25D366; margin-bottom:8px;
+      display:flex; align-items:center; gap:5px;
+    }
+    .wa-tooltip-label::before {
+      content:''; width:6px; height:6px;
+      border-radius:50%; background:#25D366; display:inline-block;
+    }
+    .wa-tooltip-msg {
+      font-size:0.77rem; color:var(--text-secondary);
+      line-height:1.65; white-space:pre-line;
+    }
+    .wa-tooltip-msg b { color:var(--text-primary); font-weight:600; }
+
+    /* ============================================================
+       WHATSAPP MODAL
+    ============================================================ */
+    #waModal {
+      position:fixed; inset:0; z-index:3000;
+      display:flex; align-items:center; justify-content:center;
+      padding:20px;
+      opacity:0; pointer-events:none;
+      transition:opacity 0.25s ease;
+    }
+    #waModal.open { opacity:1; pointer-events:all; }
+
+    .wa-modal-overlay {
+      position:absolute; inset:0;
+      background:rgba(0,0,0,0.40);
+      backdrop-filter:blur(5px); -webkit-backdrop-filter:blur(5px);
+    }
+
+    .wa-modal-box {
+      position:relative; background:#fff;
+      border-radius:var(--radius-lg); width:100%; max-width:430px;
+      box-shadow:0 24px 80px rgba(0,0,0,0.20);
+      overflow:hidden;
+      transform:scale(0.93) translateY(14px);
+      transition:transform 0.3s cubic-bezier(0.34,1.48,0.64,1);
+    }
+    #waModal.open .wa-modal-box { transform:scale(1) translateY(0); }
+
+    /* Header (green gradient) */
+    .wa-modal-header {
+      background:linear-gradient(135deg,#25D366,#128C7E);
+      padding:22px 24px 18px;
+      display:flex; align-items:center; gap:14px;
+    }
+    .wa-modal-header-avatar {
+      width:50px; height:50px; border-radius:50%;
+      object-fit:cover;
+      border:2px solid rgba(255,255,255,0.45);
+      flex-shrink:0; background:rgba(255,255,255,0.2);
+    }
+    .wa-modal-header-fallback {
+      width:50px; height:50px; border-radius:50%;
+      background:rgba(255,255,255,0.22);
+      border:2px solid rgba(255,255,255,0.45);
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.1rem; font-weight:800; color:#fff; flex-shrink:0;
+    }
+    .wa-modal-header-info h3 { font-size:1rem; font-weight:700; color:#fff; margin-bottom:2px; }
+    .wa-modal-header-info p { font-size:0.78rem; color:rgba(255,255,255,0.78); }
+
+    .wa-modal-close {
+      position:absolute; top:12px; right:12px;
+      width:32px; height:32px; border-radius:50%;
+      background:rgba(255,255,255,0.18); border:none;
+      cursor:pointer; color:#fff; font-size:1rem;
+      display:flex; align-items:center; justify-content:center;
+      transition:background 0.2s; line-height:1;
+    }
+    .wa-modal-close:hover { background:rgba(255,255,255,0.32); }
+
+    /* Chat area */
+    .wa-modal-body { padding:22px 22px 20px; background:#E5DDD5; }
+
+    .wa-modal-preview-label {
+      font-size:0.68rem; font-weight:700; letter-spacing:0.1em;
+      text-transform:uppercase; color:#777; margin-bottom:12px;
+      text-align:center;
+    }
+
+    /* WhatsApp-style chat bubble */
+    .wa-bubble {
+      background:#DCF8C6;
+      border-radius:16px 16px 4px 16px;
+      padding:14px 42px 14px 16px;
+      font-size:0.88rem; color:#111;
+      line-height:1.75; white-space:pre-line;
+      box-shadow:0 1px 3px rgba(0,0,0,0.12);
+      position:relative; word-break:break-word;
+    }
+    /* Double-tick & time */
+    .wa-bubble-meta {
+      position:absolute; bottom:8px; right:10px;
+      display:flex; align-items:center; gap:3px;
+      font-size:0.65rem; color:#73a87a;
+    }
+
+    /* Bottom action buttons */
+    .wa-modal-footer {
+      padding:16px 22px 20px;
+      display:flex; gap:10px; background:#fff;
+    }
+    .wa-modal-footer .btn {
+      flex:1; justify-content:center;
+      font-size:0.875rem; padding:12px 16px;
+    }
+
+    /* ============================================================
+       FEATURES
+    ============================================================ */
+    #features .features-desc {
+      font-size:1rem; color:var(--text-secondary);
+      max-width:640px; margin:0 auto 56px;
+      line-height:1.8; text-align:center;
+    }
+    .features-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .feature-card {
+      background:var(--card-bg); border:1px solid var(--border);
+      border-radius:var(--radius-md); padding:32px 28px;
+      box-shadow:var(--shadow-md); transition:var(--transition);
+    }
+    .feature-card:hover {
+      transform:translateY(-4px); box-shadow:var(--shadow-lg);
+      border-color:rgba(37,99,235,0.15);
+    }
+    .feature-icon-wrap {
+      width:52px; height:52px; border-radius:var(--radius-sm);
+      background:rgba(37,99,235,0.08);
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.5rem; margin-bottom:20px; transition:var(--transition);
+    }
+    .feature-card:hover .feature-icon-wrap { background:rgba(37,99,235,0.13); transform:scale(1.07); }
+    .feature-title { font-size:1rem; font-weight:700; color:var(--text-primary); margin-bottom:8px; letter-spacing:-0.01em; }
+    .feature-desc { font-size:0.9rem; color:var(--text-secondary); line-height:1.7; }
+
+    /* ============================================================
+       RULES
+    ============================================================ */
+    #rules { background:var(--section-bg); }
+    .rules-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; margin-bottom:28px; }
+    .rule-card {
+      background:var(--card-bg); border:1px solid var(--border);
+      border-radius:var(--radius-md); padding:30px 28px;
+      display:flex; gap:20px; box-shadow:var(--shadow-md); transition:var(--transition);
+    }
+    .rule-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-lg); }
+    .rule-number {
+      flex-shrink:0; width:48px; height:48px; border-radius:14px;
+      background:linear-gradient(135deg,#2563EB,#60a5fa);
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.1rem; font-weight:800; color:#fff;
+      box-shadow:0 4px 12px rgba(37,99,235,0.25);
+    }
+    .rule-content h3 { font-size:0.9rem; font-weight:700; color:var(--text-primary); margin-bottom:6px; }
+    .rule-content p { font-size:0.88rem; color:var(--text-secondary); line-height:1.7; }
+
+    .rules-note {
+      background:linear-gradient(135deg,rgba(37,99,235,0.05),rgba(96,165,250,0.05));
+      border:1px solid rgba(37,99,235,0.15);
+      border-radius:var(--radius-md); padding:24px 28px;
+      display:flex; align-items:flex-start; gap:16px;
+    }
+    .rules-note-icon { font-size:1.4rem; flex-shrink:0; margin-top:2px; }
+    .rules-note h4 { font-size:0.9rem; font-weight:700; color:var(--primary-btn); margin-bottom:5px; }
+    .rules-note p { font-size:0.88rem; color:var(--text-secondary); line-height:1.7; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    #footer { background:#0f172a; color:#94a3b8; padding:60px 0 32px; }
+    .footer-top {
+      display:flex; justify-content:space-between;
+      align-items:flex-start; gap:40px;
+      padding-bottom:40px;
+      border-bottom:1px solid rgba(255,255,255,0.07);
+      margin-bottom:32px; flex-wrap:wrap;
+    }
+    .footer-brand .logo-wrap { margin-bottom:12px; }
+    .footer-brand .logo-text { color:#fff; }
+    .footer-tagline { font-size:0.875rem; color:#64748b; max-width:220px; line-height:1.6; }
+    .footer-nav h4, .footer-social h4 {
+      font-size:0.82rem; font-weight:700; color:#e2e8f0;
+      text-transform:uppercase; letter-spacing:0.1em; margin-bottom:16px;
+    }
+    .footer-nav ul { display:flex; flex-direction:column; gap:10px; }
+    .footer-nav a { font-size:0.88rem; color:#64748b; transition:color 0.2s; }
+    .footer-nav a:hover { color:#e2e8f0; }
+    .social-icons { display:flex; gap:10px; }
+    .social-icon {
+      width:40px; height:40px; border-radius:10px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.1rem; transition:var(--transition);
+    }
+    .social-icon:hover {
+      background:rgba(37,99,235,0.2);
+      border-color:rgba(37,99,235,0.4);
+      transform:translateY(-2px);
+    }
+    .footer-bottom { text-align:center; font-size:0.82rem; color:#475569; }
+
+    /* ============================================================
+       JOIN HAPPY CLUB — REGISTRATION SECTION
+    ============================================================ */
+    #join { background: var(--bg); }
+
+    .join-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    /* Left — info panel */
+    .join-info { }
+
+    .join-info-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .join-info-title span {
+      background: linear-gradient(135deg,#2563EB,#60a5fa);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
-    .hero-tagline {
-      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
-      font-weight: 500;
+    .join-info-desc {
+      font-size: 0.97rem;
       color: var(--text-secondary);
-      margin-bottom: 22px;
-      letter-spacing: -0.01em;
-    }
-
-    .hero-description {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      max-width: 620px;
       line-height: 1.8;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
-    .hero-buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 72px;
-    }
-
-    /* Stats Cards */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      width: 100%;
-      max-width: 860px;
-    }
-
-    .stat-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 28px 20px;
-      text-align: center;
-      box-shadow: var(--shadow-md);
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .stat-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #2563EB, #60a5fa);
-      border-radius: 3px 3px 0 0;
-    }
-
-    .stat-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .stat-icon {
-      font-size: 1.8rem;
-      margin-bottom: 12px;
-    }
-
-    .stat-value {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--text-primary);
-      letter-spacing: -0.03em;
-      margin-bottom: 5px;
-    }
-
-    .stat-label {
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      letter-spacing: 0.01em;
-    }
-
-    /* ============================================================
-       TEAM MEMBERS SECTION
-    ============================================================ */
-    #team {
-      background: var(--section-bg);
-    }
-
-    /* Desktop Grid */
-    .members-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
-
-    /* Mobile Slider */
-    .members-slider-wrap {
-      display: none;
-      position: relative;
-    }
-
-    .members-slider {
-      overflow: hidden;
-      border-radius: var(--radius-md);
-    }
-
-    .slider-track {
-      display: flex;
-      transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
-      will-change: transform;
-    }
-
-    .slider-track .member-card {
-      min-width: 100%;
-      flex-shrink: 0;
-    }
-
-    .slider-controls {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 24px;
-    }
-
-    .slider-btn {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: 1.5px solid var(--border);
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: var(--transition);
-      box-shadow: var(--shadow-sm);
-      font-size: 1rem;
-      color: var(--text-secondary);
-    }
-
-    .slider-btn:hover {
-      background: var(--primary-btn);
-      color: #fff;
-      border-color: var(--primary-btn);
-      box-shadow: 0 4px 14px rgba(37,99,235,0.28);
-    }
-
-    .slider-dots {
-      display: flex;
-      gap: 7px;
-    }
-
-    .slider-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--border);
-      cursor: pointer;
-      transition: var(--transition);
-    }
-
-    .slider-dot.active {
-      background: var(--primary-btn);
-      width: 20px;
-      border-radius: 4px;
-    }
-
-    /* Member Card */
-    .member-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 28px 22px 24px;
+    .join-perks {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
-      box-shadow: var(--shadow-md);
-      transition: var(--transition);
-      position: relative;
-    }
-
-    .member-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .member-number-badge {
-      position: absolute;
-      top: 16px;
-      left: 16px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--primary-btn);
-      background: rgba(37,99,235,0.08);
-      padding: 3px 10px;
-      border-radius: 50px;
-      letter-spacing: 0.04em;
-    }
-
-    .member-avatar-wrap {
-      position: relative;
-      margin-bottom: 16px;
-      margin-top: 8px;
-    }
-
-    .member-avatar {
-      width: 84px;
-      height: 84px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #fff;
-      box-shadow: 0 0 0 3px rgba(37,99,235,0.15), var(--shadow-sm);
-      background: linear-gradient(135deg, #dbeafe, #eff6ff);
-    }
-
-    .avatar-fallback {
-      width: 84px;
-      height: 84px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #2563EB, #60a5fa);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: #fff;
-      border: 3px solid #fff;
-      box-shadow: 0 0 0 3px rgba(37,99,235,0.15), var(--shadow-sm);
-    }
-
-    .member-name {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 4px;
-      letter-spacing: -0.01em;
-    }
-
-    .member-meta {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      margin-bottom: 12px;
-    }
-
-    .meta-chip {
-      font-size: 0.73rem;
-      font-weight: 600;
-      color: var(--text-secondary);
-      background: var(--section-bg);
-      border: 1px solid var(--border);
-      padding: 3px 10px;
-      border-radius: 50px;
-    }
-
-    .member-signature-label {
-      font-size: 0.72rem;
-      font-weight: 500;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 3px;
-    }
-
-    .member-signature {
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      font-style: italic;
-      margin-bottom: 18px;
-    }
-
-    .member-divider {
-      width: 100%;
-      height: 1px;
-      background: var(--border);
-      margin-bottom: 16px;
-    }
-
-    /* ============================================================
-       WHATSAPP AUTO MESSAGE — MESSAGE PREVIEW TOOLTIP
-    ============================================================ */
-    .wa-btn-wrap {
-      width: 100%;
-      position: relative;
-    }
-
-    /* Preview bubble that appears above the button on hover */
-    .wa-preview {
-      position: absolute;
-      bottom: calc(100% + 12px);
-      left: 50%;
-      transform: translateX(-50%) translateY(6px);
-      width: 270px;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 16px 18px;
-      box-shadow: var(--shadow-lg);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.22s ease, transform 0.22s ease;
-      z-index: 50;
-      text-align: left;
-    }
-
-    .wa-preview::after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 7px solid transparent;
-      border-top-color: #fff;
-      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.08));
-    }
-
-    .wa-btn-wrap:hover .wa-preview,
-    .wa-btn-wrap:focus-within .wa-preview {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-      pointer-events: none;
-    }
-
-    .wa-preview-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #25D366;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .wa-preview-label::before {
-      content: '';
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #25D366;
-    }
-
-    .wa-preview-msg {
-      font-size: 0.78rem;
-      color: var(--text-secondary);
-      line-height: 1.65;
-      white-space: pre-line;
-      font-family: var(--font);
-    }
-
-    .wa-preview-msg strong {
-      color: var(--text-primary);
-    }
-
-    /* ============================================================
-       WHATSAPP MODAL (full message preview on click)
-    ============================================================ */
-    #waModal {
-      position: fixed;
-      inset: 0;
-      z-index: 2000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s ease;
-    }
-
-    #waModal.open {
-      opacity: 1;
-      pointer-events: all;
-    }
-
-    .wa-modal-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.38);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-    }
-
-    .wa-modal-box {
-      position: relative;
-      background: #fff;
-      border-radius: var(--radius-lg);
-      width: 100%;
-      max-width: 440px;
-      box-shadow: 0 24px 80px rgba(0,0,0,0.18);
-      overflow: hidden;
-      transform: scale(0.94) translateY(12px);
-      transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1);
-    }
-
-    #waModal.open .wa-modal-box {
-      transform: scale(1) translateY(0);
-    }
-
-    .wa-modal-header {
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      padding: 22px 24px 18px;
-      display: flex;
-      align-items: center;
       gap: 14px;
     }
 
-    .wa-modal-avatar {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid rgba(255,255,255,0.4);
-      background: rgba(255,255,255,0.2);
-      flex-shrink: 0;
-    }
-
-    .wa-modal-avatar-fallback {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.25);
-      border: 2px solid rgba(255,255,255,0.4);
+    .join-perk {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: #fff;
-      flex-shrink: 0;
+      align-items: flex-start;
+      gap: 13px;
     }
 
-    .wa-modal-info h3 {
-      font-size: 1rem;
+    .join-perk-icon {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: rgba(37,99,235,0.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .join-perk:hover .join-perk-icon {
+      background: rgba(37,99,235,0.14);
+      transform: scale(1.08);
+    }
+
+    .join-perk-text h4 {
+      font-size: 0.9rem;
       font-weight: 700;
-      color: #fff;
+      color: var(--text-primary);
       margin-bottom: 2px;
     }
 
-    .wa-modal-info p {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.8);
-    }
-
-    .wa-modal-close {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.2);
-      border: none;
-      cursor: pointer;
-      color: #fff;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s;
-    }
-
-    .wa-modal-close:hover { background: rgba(255,255,255,0.35); }
-
-    .wa-modal-body {
-      padding: 24px;
-    }
-
-    .wa-modal-preview-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+    .join-perk-text p {
+      font-size: 0.82rem;
       color: var(--text-secondary);
-      margin-bottom: 12px;
+      line-height: 1.55;
     }
 
-    /* Chat bubble style */
-    .wa-chat-bubble {
-      background: #DCF8C6;
-      border-radius: 16px 16px 4px 16px;
-      padding: 14px 16px;
-      font-size: 0.9rem;
-      color: #111;
-      line-height: 1.7;
-      white-space: pre-line;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    /* Right — form card */
+    .join-form-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px 38px;
+      box-shadow: var(--shadow-lg);
       position: relative;
-      margin-bottom: 6px;
+      overflow: hidden;
     }
 
-    .wa-chat-bubble::after {
-      content: '✓✓';
+    /* Subtle top accent line */
+    .join-form-card::before {
+      content: '';
       position: absolute;
-      bottom: 8px;
-      right: 12px;
-      font-size: 0.65rem;
-      color: #4FC3F7;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg,#2563EB,#60a5fa);
     }
 
-    .wa-chat-time {
-      font-size: 0.7rem;
-      color: var(--text-secondary);
-      text-align: right;
-      margin-bottom: 20px;
-    }
-
-    .wa-modal-actions {
-      display: flex;
-      gap: 10px;
-    }
-
-    .wa-modal-actions .btn {
-      flex: 1;
-      justify-content: center;
-      font-size: 0.875rem;
-      padding: 11px 16px;
-    }
-
-    .btn-cancel {
-      background: var(--section-bg);
-      color: var(--text-secondary);
-      border: 1px solid var(--border);
-    }
-
-    .btn-cancel:hover {
-      background: var(--border);
-      color: var(--text-primary);
-      transform: translateY(-1px);
-    }
-
-    /* ============================================================
-       FEATURES SECTION
-    ============================================================ */
-    #features .features-desc {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      max-width: 640px;
-      margin: 0 auto 56px;
-      line-height: 1.8;
-      text-align: center;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .feature-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 32px 28px;
-      box-shadow: var(--shadow-md);
-      transition: var(--transition);
-    }
-
-    .feature-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-      border-color: rgba(37,99,235,0.15);
-    }
-
-    .feature-icon-wrap {
-      width: 52px;
-      height: 52px;
-      border-radius: var(--radius-sm);
-      background: rgba(37,99,235,0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      transition: var(--transition);
-    }
-
-    .feature-card:hover .feature-icon-wrap {
-      background: rgba(37,99,235,0.12);
-      transform: scale(1.06);
-    }
-
-    .feature-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 8px;
-      letter-spacing: -0.01em;
-    }
-
-    .feature-desc {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
-    }
-
-    /* ============================================================
-       RULES SECTION
-    ============================================================ */
-    #rules {
-      background: var(--section-bg);
-    }
-
-    .rules-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-      margin-bottom: 28px;
-    }
-
-    .rule-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 30px 28px;
-      display: flex;
-      gap: 20px;
-      box-shadow: var(--shadow-md);
-      transition: var(--transition);
-    }
-
-    .rule-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .rule-number {
-      flex-shrink: 0;
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #2563EB, #60a5fa);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
+    .form-title {
+      font-size: 1.2rem;
       font-weight: 800;
-      color: #fff;
-      box-shadow: 0 4px 12px rgba(37,99,235,0.25);
-    }
-
-    .rule-content h3 {
-      font-size: 0.9rem;
-      font-weight: 700;
       color: var(--text-primary);
+      letter-spacing: -0.02em;
       margin-bottom: 6px;
-      letter-spacing: -0.01em;
     }
 
-    .rule-content p {
-      font-size: 0.88rem;
+    .form-subtitle {
+      font-size: 0.85rem;
       color: var(--text-secondary);
-      line-height: 1.7;
+      margin-bottom: 28px;
+      line-height: 1.5;
     }
 
-    .rules-note {
-      background: linear-gradient(135deg, rgba(37,99,235,0.05), rgba(96,165,250,0.05));
-      border: 1px solid rgba(37,99,235,0.15);
-      border-radius: var(--radius-md);
-      padding: 24px 28px;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
+    /* Floating-label field group */
+    .field-group {
+      position: relative;
+      margin-bottom: 20px;
     }
 
-    .rules-note-icon {
-      font-size: 1.4rem;
-      flex-shrink: 0;
-      margin-top: 2px;
+    /* All inputs & selects — tall enough for floated label + value */
+    .field-group input,
+    .field-group select {
+      width: 100%;
+      height: 62px;
+      padding: 26px 16px 8px;   /* top space reserved for floated label */
+      font-size: 0.97rem;
+      font-family: var(--font);
+      font-weight: 500;
+      color: var(--text-primary);
+      background: var(--section-bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      appearance: none;
+      -webkit-appearance: none;
+      line-height: 1.2;
     }
 
-    .rules-note h4 {
-      font-size: 0.9rem;
+    /* Chevron arrow for select */
+    .field-group select {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 42px;
+    }
+
+    /* Focus state */
+    .field-group input:focus,
+    .field-group select:focus {
+      border-color: var(--primary-btn);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.10);
+    }
+
+    /* Floating label — starts vertically centred */
+    .field-group label {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #9ca3af;
+      pointer-events: none;
+      transition: top 0.18s ease, font-size 0.18s ease,
+                  color 0.18s ease, transform 0.18s ease,
+                  letter-spacing 0.18s ease;
+      white-space: nowrap;
+    }
+
+    /* Floated state — label moves to top, shrinks, turns blue */
+    .field-group input:focus          ~ label,
+    .field-group input:not(:placeholder-shown) ~ label,
+    .field-group select:focus         ~ label,
+    .field-group select.has-value     ~ label {
+      top: 11px;
+      transform: translateY(0);
+      font-size: 0.67rem;
       font-weight: 700;
       color: var(--primary-btn);
-      margin-bottom: 5px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
     }
 
-    .rules-note p {
+    /* Phone prefix wrapper */
+    .phone-wrap {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .phone-prefix {
+      display: flex;
+      align-items: center;
+      padding: 0 14px;
+      height: 62px;
+      background: var(--section-bg);
+      border: 1.5px solid var(--border);
+      border-right: none;
+      border-radius: var(--radius-sm) 0 0 var(--radius-sm);
       font-size: 0.88rem;
+      font-weight: 600;
       color: var(--text-secondary);
-      line-height: 1.7;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: border-color 0.2s ease, background 0.2s ease;
+      letter-spacing: 0.01em;
     }
 
-    /* ============================================================
-       FOOTER
-    ============================================================ */
-    #footer {
-      background: #0f172a;
-      color: #94a3b8;
-      padding: 60px 0 32px;
+    .phone-wrap:focus-within .phone-prefix {
+      border-color: var(--primary-btn);
+      background: #fff;
     }
 
-    .footer-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
-      padding-bottom: 40px;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-      margin-bottom: 32px;
-      flex-wrap: wrap;
+    .phone-wrap .field-group {
+      flex: 1;
+      margin-bottom: 0;
     }
 
-    .footer-brand .logo-wrap {
-      margin-bottom: 12px;
+    .phone-wrap .field-group input {
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      height: 62px;
     }
 
-    .footer-brand .logo-text {
+    /* Validation error message */
+    .field-error {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #ef4444;
+      margin-top: 5px;
+      padding-left: 2px;
+      display: none;
+      animation: slideErr 0.2s ease;
+    }
+
+    @keyframes slideErr {
+      from { opacity:0; transform: translateY(-4px); }
+      to   { opacity:1; transform: translateY(0); }
+    }
+
+    .field-error.show { display: block; }
+
+    /* Input error state */
+    .field-group.error input,
+    .field-group.error select,
+    .phone-wrap.error .phone-prefix,
+    .phone-wrap.error input {
+      border-color: #ef4444;
+      background: #fff5f5;
+      box-shadow: 0 0 0 3px rgba(239,68,68,0.08);
+    }
+
+    /* Submit button */
+    .btn-join {
+      width: 100%;
+      padding: 15px 24px;
+      background: var(--primary-btn);
       color: #fff;
-    }
-
-    .footer-tagline {
-      font-size: 0.875rem;
-      color: #64748b;
-      max-width: 220px;
-      line-height: 1.6;
-    }
-
-    .footer-nav h4 {
-      font-size: 0.82rem;
+      font-size: 1rem;
       font-weight: 700;
-      color: #e2e8f0;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-    }
-
-    .footer-nav ul {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .footer-nav a {
-      font-size: 0.88rem;
-      color: #64748b;
-      transition: color 0.2s;
-    }
-
-    .footer-nav a:hover { color: #e2e8f0; }
-
-    .footer-social h4 {
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #e2e8f0;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 10px;
-    }
-
-    .social-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
+      font-family: var(--font);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.1rem;
+      gap: 10px;
+      box-shadow: 0 4px 18px rgba(37,99,235,0.32);
       transition: var(--transition);
-      text-decoration: none;
+      letter-spacing: -0.01em;
+      margin-top: 8px;
     }
 
-    .social-icon:hover {
-      background: rgba(37,99,235,0.2);
-      border-color: rgba(37,99,235,0.4);
+    .btn-join:hover {
+      background: var(--btn-hover);
+      box-shadow: 0 6px 24px rgba(37,99,235,0.40);
       transform: translateY(-2px);
     }
 
-    .footer-bottom {
+    .btn-join:active { transform: translateY(0); }
+
+    .btn-join:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .form-note {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
       text-align: center;
-      font-size: 0.82rem;
-      color: #475569;
+      margin-top: 14px;
+      line-height: 1.5;
+    }
+
+    .form-note span { color: var(--primary-btn); font-weight: 600; }
+
+    /* ---- Success State ---- */
+    .form-success {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 12px 0 8px;
+    }
+
+    .success-icon {
+      width: 68px; height: 68px;
+      border-radius: 50%;
+      background: linear-gradient(135deg,#25D366,#128C7E);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 24px rgba(37,211,102,0.30);
+      animation: popIn 0.4s cubic-bezier(0.34,1.56,0.64,1);
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.6); opacity:0; }
+      to   { transform: scale(1);   opacity:1; }
+    }
+
+    .success-title {
+      font-size: 1.15rem; font-weight: 800;
+      color: var(--text-primary); letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .success-desc {
+      font-size: 0.88rem; color: var(--text-secondary);
+      line-height: 1.7; margin-bottom: 24px; max-width: 280px;
+    }
+
+    /* ============================================================
+       RESPONSIVE — Join section
+    ============================================================ */
+    @media(max-width:900px){
+      .join-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .join-info { order: 2; }
+      .join-form-card { order: 1; }
+    }
+
+    @media(max-width:480px){
+      .join-form-card { padding: 28px 20px; }
     }
 
     /* ============================================================
        SCROLL TO TOP
     ============================================================ */
     #scrollTop {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      background: var(--primary-btn);
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      box-shadow: 0 4px 18px rgba(37,99,235,0.35);
-      opacity: 0;
-      transform: translateY(14px);
-      pointer-events: none;
-      transition: opacity 0.25s ease, transform 0.25s ease;
-      z-index: 998;
+      position:fixed; bottom:28px; right:28px;
+      width:46px; height:46px; border-radius:50%;
+      background:var(--primary-btn); color:#fff; border:none;
+      cursor:pointer; display:flex; align-items:center; justify-content:center;
+      font-size:1.2rem; box-shadow:0 4px 18px rgba(37,99,235,0.35);
+      opacity:0; transform:translateY(14px); pointer-events:none;
+      transition:opacity 0.25s ease,transform 0.25s ease; z-index:998;
     }
-
-    #scrollTop.visible {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: all;
-    }
-
-    #scrollTop:hover {
-      background: var(--btn-hover);
-      transform: translateY(-2px);
-    }
+    #scrollTop.visible { opacity:1; transform:translateY(0); pointer-events:all; }
+    #scrollTop:hover { background:var(--btn-hover); transform:translateY(-2px); }
 
     /* ============================================================
-       RESPONSIVE DESIGN
+       RESPONSIVE
     ============================================================ */
-    @media (max-width: 1024px) {
-      .members-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    @media(max-width:1024px){
+      .members-grid { grid-template-columns:repeat(3,1fr); }
+      .features-grid { grid-template-columns:repeat(2,1fr); }
+      .stats-grid { grid-template-columns:repeat(2,1fr); }
     }
-
-    @media (max-width: 768px) {
-      :root { --header-h: 64px; }
-
-      .section { padding: 70px 0; }
-
-      .nav-desktop { display: none; }
-      .hamburger { display: flex; }
-
-      #home {
-        padding-top: calc(var(--header-h) + 48px);
-        padding-bottom: 60px;
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 100%;
-      }
-
-      /* Show slider, hide grid on mobile */
-      .members-grid { display: none; }
-      .members-slider-wrap { display: block; }
-
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .rules-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-top {
-        flex-direction: column;
-        gap: 32px;
-      }
-
-      .rule-card {
-        padding: 22px 18px;
-      }
+    @media(max-width:768px){
+      :root{ --header-h:64px; }
+      .section{ padding:70px 0; }
+      .nav-desktop{ display:none; }
+      .hamburger{ display:flex; }
+      #home{ padding-top:calc(var(--header-h) + 48px); padding-bottom:60px; }
+      .stats-grid{ grid-template-columns:repeat(2,1fr); max-width:100%; }
+      .members-grid{ display:none; }
+      .members-slider-wrap{ display:block; }
+      .features-grid{ grid-template-columns:1fr; }
+      .rules-grid{ grid-template-columns:1fr; }
+      .footer-top{ flex-direction:column; gap:32px; }
+      .rule-card{ padding:22px 18px; }
     }
-
-    @media (max-width: 480px) {
-      .container { padding: 0 18px; }
-
-      .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .hero-buttons .btn {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-
-      .stat-card {
-        padding: 22px 14px;
-      }
-
-      .stat-value { font-size: 1.3rem; }
+    @media(max-width:480px){
+      .container{ padding:0 18px; }
+      .hero-buttons{ flex-direction:column; align-items:center; gap:10px; }
+      .hero-buttons .btn{ width:100%; max-width:300px; justify-content:center; }
+      .stats-grid{ grid-template-columns:repeat(2,1fr); gap:12px; }
+      .stat-card{ padding:22px 14px; }
+      .stat-value{ font-size:1.3rem; }
     }
   </style>
 </head>
@@ -1406,147 +1068,86 @@
   <header id="header" role="banner">
     <div class="container">
       <div class="header-inner">
+        <a href="#home" class="logo-wrap" aria-label="Happy Club Home">
+          <div class="logo-img">
+            <img src="hc.png" alt="Happy Club Logo" loading="lazy"
+              onerror="this.parentElement.innerHTML='<div class=\'logo-fallback\'>H</div>'" />
+          </div>
+          <span class="logo-text">Happy Club</span>
+        </a>
 
-        <!-- Logo -->
-       <!-- Logo -->
-<a href="#home" class="logo-wrap" aria-label="Happy Club Home">
-  <div class="logo-img" id="logoWrap">
-    <!-- logo.png loads here; fallback shown if missing -->
-    <img
-      src="hc.png"
-      alt="Happy Club Logo"
-      loading="lazy"
-      onerror="this.outerHTML='<div class=\'logo-fallback\'>H</div>'"
-    />
-  </div>
-  <span class="logo-text">Happy Club</span>
-</a>
-
-        <!-- Desktop Nav -->
         <nav class="nav-desktop" role="navigation" aria-label="Primary navigation">
           <a href="#home">Home</a>
           <a href="#team">Team Members</a>
           <a href="#features">Features</a>
           <a href="#rules">Rules</a>
+          <a href="#join">Join Club</a>
         </nav>
 
-        <!-- Hamburger -->
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
-
       </div>
     </div>
-
-    <!-- Mobile Nav -->
     <nav class="nav-mobile" id="mobileNav" role="navigation" aria-label="Mobile navigation">
       <a href="#home" class="mobile-link">Home</a>
       <a href="#team" class="mobile-link">Team Members</a>
       <a href="#features" class="mobile-link">Features</a>
       <a href="#rules" class="mobile-link">Rules</a>
+      <a href="#join" class="mobile-link">Join Club</a>
     </nav>
   </header>
 
   <!-- ============================================================
-       HERO SECTION
+       HERO
   ============================================================ -->
   <section id="home" aria-labelledby="heroHeading">
     <div class="container">
       <div class="hero-content">
-
         <div class="hero-badge fade-in">
-          <span class="dot"></span>
-          Now welcoming new members
+          <span class="dot"></span> Now welcoming new members
         </div>
-
         <h1 class="hero-title fade-in" id="heroHeading">
           Welcome to <span>Happy Club</span>
         </h1>
-
         <p class="hero-tagline fade-in">Where Every Cup Brings People Together.</p>
-
         <p class="hero-description fade-in">
           Happy Club is more than just a tea group. It is a place where friends gather to relax, share laughter,
           enjoy meaningful conversations, and create unforgettable memories. Whether it's a hot cup of tea or a
           refreshing cold lemon drink, every moment is filled with friendship, happiness, and positive energy.
         </p>
-
         <div class="hero-buttons fade-in">
-          <a href="#team" class="btn btn-primary">
-            <span>☕</span> Meet Our Team
-          </a>
-          <a href="#features" class="btn btn-outline">
-            <span>✨</span> Join the Club
-          </a>
+          <a href="#team" class="btn btn-primary">☕ Meet Our Team</a>
+          <a href="#features" class="btn btn-outline">✨ Join the Club</a>
         </div>
-
-        <!-- Stats -->
         <div class="stats-grid">
-          <div class="stat-card fade-in">
-            <div class="stat-icon">👥</div>
-            <div class="stat-value">11</div>
-            <div class="stat-label">Members</div>
-          </div>
-          <div class="stat-card fade-in">
-            <div class="stat-icon">🍵</div>
-            <div class="stat-value">Daily</div>
-            <div class="stat-label">Tea Time</div>
-          </div>
-          <div class="stat-card fade-in">
-            <div class="stat-icon">😊</div>
-            <div class="stat-value">∞</div>
-            <div class="stat-label">Unlimited Smiles</div>
-          </div>
-          <div class="stat-card fade-in">
-            <div class="stat-icon">🤝</div>
-            <div class="stat-value">100%</div>
-            <div class="stat-label">Friendship</div>
-          </div>
+          <div class="stat-card fade-in"><div class="stat-icon">👥</div><div class="stat-value">11</div><div class="stat-label">Members</div></div>
+          <div class="stat-card fade-in"><div class="stat-icon">🍵</div><div class="stat-value">Daily</div><div class="stat-label">Tea Time</div></div>
+          <div class="stat-card fade-in"><div class="stat-icon">😊</div><div class="stat-value">∞</div><div class="stat-label">Unlimited Smiles</div></div>
+          <div class="stat-card fade-in"><div class="stat-icon">🤝</div><div class="stat-value">100%</div><div class="stat-label">Friendship</div></div>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       TEAM MEMBERS SECTION
+       TEAM MEMBERS
   ============================================================ -->
   <section id="team" class="section" aria-labelledby="teamHeading">
     <div class="container">
-
       <div class="section-header">
         <span class="section-label fade-in">Our People</span>
         <h2 class="section-title fade-in" id="teamHeading">Our Happy Club Team</h2>
         <p class="section-subtitle fade-in">Meet the wonderful people who make Happy Club special.</p>
       </div>
 
-      <!--
-        =====================================================
-        MEMBER DATA — Easy to edit!
-        Each member object:
-          num       : Member number (display badge)
-          name      : Full name
-          listNum   : List number
-          signature : Signature / nickname
-          phone     : WhatsApp number (no + sign for wa.me link)
-          photo     : URL to profile photo (use '' for initials fallback)
-          initials  : Fallback initials shown if photo fails
-        =====================================================
-      -->
+      <!-- Desktop Grid -->
+      <div class="members-grid" id="membersGrid"></div>
 
-      <!-- DESKTOP GRID -->
-      <div class="members-grid" id="membersGrid">
-        <!-- Cards injected by JS -->
-      </div>
-
-      <!-- MOBILE SLIDER -->
+      <!-- Mobile Slider -->
       <div class="members-slider-wrap" id="sliderWrap">
         <div class="members-slider">
-          <div class="slider-track" id="sliderTrack">
-            <!-- Cards injected by JS -->
-          </div>
+          <div class="slider-track" id="sliderTrack"></div>
         </div>
         <div class="slider-controls">
           <button class="slider-btn" id="prevBtn" aria-label="Previous member">&#8592;</button>
@@ -1554,119 +1155,51 @@
           <button class="slider-btn" id="nextBtn" aria-label="Next member">&#8594;</button>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- ============================================================
-       FEATURES SECTION
+       FEATURES
   ============================================================ -->
   <section id="features" class="section" aria-labelledby="featuresHeading">
     <div class="container">
-
       <div class="section-header">
         <span class="section-label fade-in">Why Us</span>
         <h2 class="section-title fade-in" id="featuresHeading">Why Happy Club?</h2>
       </div>
-
       <p class="features-desc fade-in">
         Happy Club is a place where people leave behind stress, worries, and the pressures of everyday life.
         It is a welcoming space to relax, enjoy tea or cold lemon drinks, share meaningful conversations,
         laugh together, play fun games, and spend quality time with friends. Every gathering creates stronger
         friendships, positive memories, and lasting happiness.
       </p>
-
       <div class="features-grid">
-
-        <div class="feature-card fade-in">
-          <div class="feature-icon-wrap">🍵</div>
-          <h3 class="feature-title">Tea &amp; Cold Lemon Time</h3>
-          <p class="feature-desc">Enjoy your favorite drinks together in a relaxed and welcoming atmosphere.</p>
-        </div>
-
-        <div class="feature-card fade-in">
-          <div class="feature-icon-wrap">🌿</div>
-          <h3 class="feature-title">Stress-Free Environment</h3>
-          <p class="feature-desc">Relax, refresh your mind, and leave your daily worries at the door.</p>
-        </div>
-
-        <div class="feature-card fade-in">
-          <div class="feature-icon-wrap">🎮</div>
-          <h3 class="feature-title">Fun Games</h3>
-          <p class="feature-desc">Enjoy entertaining games together that bring laughter and friendly competition.</p>
-        </div>
-
-        <div class="feature-card fade-in">
-          <div class="feature-icon-wrap">🤝</div>
-          <h3 class="feature-title">Strong Friendship</h3>
-          <p class="feature-desc">Build trust, deepen bonds, and form lasting relationships that go beyond the club.</p>
-        </div>
-
-        <div class="feature-card fade-in">
-          <div class="feature-icon-wrap">😄</div>
-          <h3 class="feature-title">Laughter &amp; Memories</h3>
-          <p class="feature-desc">Share smiles, create unforgettable moments, and treasure every gathering.</p>
-        </div>
-
-        <div class="feature-card fade-in">
-          <div class="feature-icon-wrap">💙</div>
-          <h3 class="feature-title">Positive Community</h3>
-          <p class="feature-desc">A community built on respect, kindness, unity, and genuine care for one another.</p>
-        </div>
-
+        <div class="feature-card fade-in"><div class="feature-icon-wrap">🍵</div><h3 class="feature-title">Tea &amp; Cold Lemon Time</h3><p class="feature-desc">Enjoy your favorite drinks together in a relaxed and welcoming atmosphere.</p></div>
+        <div class="feature-card fade-in"><div class="feature-icon-wrap">🌿</div><h3 class="feature-title">Stress-Free Environment</h3><p class="feature-desc">Relax, refresh your mind, and leave your daily worries at the door.</p></div>
+        <div class="feature-card fade-in"><div class="feature-icon-wrap">🎮</div><h3 class="feature-title">Fun Games</h3><p class="feature-desc">Enjoy entertaining games together that bring laughter and friendly competition.</p></div>
+        <div class="feature-card fade-in"><div class="feature-icon-wrap">🤝</div><h3 class="feature-title">Strong Friendship</h3><p class="feature-desc">Build trust, deepen bonds, and form lasting relationships that go beyond the club.</p></div>
+        <div class="feature-card fade-in"><div class="feature-icon-wrap">😄</div><h3 class="feature-title">Laughter &amp; Memories</h3><p class="feature-desc">Share smiles, create unforgettable moments, and treasure every gathering.</p></div>
+        <div class="feature-card fade-in"><div class="feature-icon-wrap">💙</div><h3 class="feature-title">Positive Community</h3><p class="feature-desc">A community built on respect, kindness, unity, and genuine care for one another.</p></div>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       RULES SECTION
+       RULES
   ============================================================ -->
   <section id="rules" class="section section-alt" aria-labelledby="rulesHeading">
     <div class="container">
-
       <div class="section-header">
         <span class="section-label fade-in">Guidelines</span>
         <h2 class="section-title fade-in" id="rulesHeading">Happy Club Rules</h2>
         <p class="section-subtitle fade-in">Every member is expected to follow these rules.</p>
       </div>
-
       <div class="rules-grid">
-
-        <div class="rule-card fade-in">
-          <div class="rule-number">1</div>
-          <div class="rule-content">
-            <h3>Registration Required</h3>
-            <p>Every new member must register by providing their name, a short introduction, signature, and thumbprint.</p>
-          </div>
-        </div>
-
-        <div class="rule-card fade-in">
-          <div class="rule-number">2</div>
-          <div class="rule-content">
-            <h3>Active Participation</h3>
-            <p>Every member should actively participate and maintain regular attendance at club gatherings.</p>
-          </div>
-        </div>
-
-        <div class="rule-card fade-in">
-          <div class="rule-number">3</div>
-          <div class="rule-content">
-            <h3>Timely Contributions</h3>
-            <p>Each member must pay their assigned contribution on time. Repeated excuses for payment are not acceptable. Everyone is expected to respect and follow the club rules.</p>
-          </div>
-        </div>
-
-        <div class="rule-card fade-in">
-          <div class="rule-number">4</div>
-          <div class="rule-content">
-            <h3>Late Payment Fine</h3>
-            <p>If a member fails to pay their contribution on their assigned turn, they must pay an additional fine equal to two days of tea expenses.</p>
-          </div>
-        </div>
-
+        <div class="rule-card fade-in"><div class="rule-number">1</div><div class="rule-content"><h3>Registration Required</h3><p>Every new member must register by providing their name, a short introduction, signature, and thumbprint.</p></div></div>
+        <div class="rule-card fade-in"><div class="rule-number">2</div><div class="rule-content"><h3>Active Participation</h3><p>Every member should actively participate and maintain regular attendance at club gatherings.</p></div></div>
+        <div class="rule-card fade-in"><div class="rule-number">3</div><div class="rule-content"><h3>Timely Contributions</h3><p>Each member must pay their assigned contribution on time. Repeated excuses are not acceptable. Everyone must respect and follow the club rules.</p></div></div>
+        <div class="rule-card fade-in"><div class="rule-number">4</div><div class="rule-content"><h3>Late Payment Fine</h3><p>If a member fails to pay on their assigned turn, they must pay an additional fine equal to two days of tea expenses.</p></div></div>
       </div>
-
-      <!-- Important Note -->
       <div class="rules-note fade-in">
         <div class="rules-note-icon">📌</div>
         <div>
@@ -1674,7 +1207,160 @@
           <p>Each member's payment turn comes twice every month. Paying on your assigned turn is mandatory. Regular and on-time payments keep the club running smoothly for everyone.</p>
         </div>
       </div>
+    </div>
+  </section>
 
+  <!-- ============================================================
+       JOIN HAPPY CLUB — REGISTRATION SECTION
+  ============================================================ -->
+  <section id="join" class="section" aria-labelledby="joinHeading">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-label fade-in">Registration</span>
+        <h2 class="section-title fade-in" id="joinHeading">Join Happy Club</h2>
+        <p class="section-subtitle fade-in">
+          Become a part of our Happy Club family by filling out the registration form below.
+        </p>
+      </div>
+
+      <div class="join-layout">
+
+        <!-- ── Left: Info Panel ── -->
+        <div class="join-info fade-in">
+          <h3 class="join-info-title">
+            Start your journey<br/>with <span>Happy Club</span> ☕
+          </h3>
+          <p class="join-info-desc">
+            Joining Happy Club means becoming part of a warm, welcoming community of tea lovers and friends.
+            Fill out the simple form and your request will be sent directly to our admin via WhatsApp.
+            We'll get back to you quickly!
+          </p>
+
+          <div class="join-perks">
+            <div class="join-perk">
+              <div class="join-perk-icon">🍵</div>
+              <div class="join-perk-text">
+                <h4>Daily Tea & Drinks</h4>
+                <p>Enjoy tea, cold lemon, and your favourite drinks every day with the group.</p>
+              </div>
+            </div>
+            <div class="join-perk">
+              <div class="join-perk-icon">😊</div>
+              <div class="join-perk-text">
+                <h4>Unlimited Happiness</h4>
+                <p>Share laughter, conversations, and unforgettable moments with friends.</p>
+              </div>
+            </div>
+            <div class="join-perk">
+              <div class="join-perk-icon">🤝</div>
+              <div class="join-perk-text">
+                <h4>Real Friendship</h4>
+                <p>Build genuine, lasting bonds in a positive and respectful community.</p>
+              </div>
+            </div>
+            <div class="join-perk">
+              <div class="join-perk-icon">🎮</div>
+              <div class="join-perk-text">
+                <h4>Fun & Games</h4>
+                <p>Participate in fun activities and create memories that last a lifetime.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Right: Registration Form Card ── -->
+        <div class="join-form-card fade-in">
+
+          <!-- Default form view -->
+          <div id="formView">
+            <p class="form-title">✍️ Register Now</p>
+            <p class="form-subtitle">Fill in your details and join the family. It's quick and easy!</p>
+
+            <form id="joinForm" novalidate autocomplete="off">
+
+              <!-- Full Name -->
+              <div class="field-group" id="fg-name">
+                <input
+                  type="text"
+                  id="fieldName"
+                  name="name"
+                  placeholder=" "
+                  maxlength="80"
+                  aria-label="Full Name"
+                  required
+                />
+                <label for="fieldName">Full Name *</label>
+              </div>
+              <div class="field-error" id="err-name">⚠ Please enter your full name.</div>
+
+              <!-- Signature Drink -->
+              <div class="field-group" id="fg-drink">
+                <select id="fieldDrink" name="drink" aria-label="Signature Drink" required>
+                  <option value="" disabled selected hidden></option>
+                  <option value="Tea">🍵  Tea</option>
+                  <option value="Cold Lemon">🍋  Cold Lemon</option>
+                  <option value="Coffee">☕  Coffee</option>
+                  <option value="Milk Tea">🥛  Milk Tea</option>
+                  <option value="Green Tea">🌿  Green Tea</option>
+                  <option value="Ginger Tea">🌶  Ginger Tea</option>
+                  <option value="Black Tea">🖤  Black Tea</option>
+                  <option value="Herbal Tea">🌸  Herbal Tea</option>
+                </select>
+                <label for="fieldDrink">Signature Drink *</label>
+              </div>
+              <div class="field-error" id="err-drink">⚠ Please select your signature drink.</div>
+
+              <!-- Contact Number -->
+              <div style="margin-bottom:4px;">
+                <div class="phone-wrap" id="fg-phone">
+                  <span class="phone-prefix">🇳🇵 &nbsp;+977</span>
+                  <div class="field-group" style="margin-bottom:0;">
+                    <input
+                      type="tel"
+                      id="fieldPhone"
+                      name="phone"
+                      placeholder=" "
+                      maxlength="15"
+                      pattern="[0-9]{7,15}"
+                      aria-label="Contact Number"
+                      required
+                    />
+                    <label for="fieldPhone">Contact Number *</label>
+                  </div>
+                </div>
+              </div>
+              <div class="field-error" id="err-phone">⚠ Please enter a valid contact number (digits only).</div>
+
+              <button type="submit" class="btn-join" id="joinBtn">
+                <span>💬</span> Join Happy Club via WhatsApp
+              </button>
+
+            </form>
+
+            <p class="form-note">
+              By submitting, your registration will be sent to our admin via
+              <span>WhatsApp</span>. No backend, no data stored. 🔒
+            </p>
+          </div>
+
+          <!-- Success view (shown after submit) -->
+          <div class="form-success" id="successView">
+            <div class="success-icon">✅</div>
+            <h3 class="success-title">WhatsApp is Opening!</h3>
+            <p class="success-desc">
+              Your registration message has been prepared and WhatsApp is opening now.
+              The admin will review your request and add you to Happy Club soon!
+            </p>
+            <button class="btn-join" onclick="resetJoinForm()" style="max-width:220px;font-size:0.9rem;padding:12px 20px;">
+              ↩ Submit Another
+            </button>
+          </div>
+
+        </div>
+        <!-- end form card -->
+
+      </div>
     </div>
   </section>
 
@@ -1684,24 +1370,16 @@
   <footer id="footer" role="contentinfo">
     <div class="container">
       <div class="footer-top">
-
-        <!-- Brand -->
         <div class="footer-brand">
-          <a href="#home" class="logo-wrap" aria-label="Happy Club Home">
+          <a href="#home" class="logo-wrap">
             <div class="logo-img">
-              <img
-                src="hc.png"
-                alt="Happy Club Logo"
-                loading="lazy"
-                onerror="this.parentElement.innerHTML='<div class=\'logo-fallback\'>H</div>'"
-              />
+              <img src="hc.png" alt="Happy Club Logo" loading="lazy"
+                onerror="this.parentElement.innerHTML='<div class=\'logo-fallback\'>H</div>'" />
             </div>
             <span class="logo-text">Happy Club</span>
           </a>
           <p class="footer-tagline">Built with Friendship &amp; Tea ☕</p>
         </div>
-
-        <!-- Nav Links -->
         <div class="footer-nav">
           <h4>Navigate</h4>
           <ul>
@@ -1709,32 +1387,70 @@
             <li><a href="#team">Team Members</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#rules">Rules</a></li>
+            <li><a href="#join">Join Club</a></li>
           </ul>
         </div>
-
-        <!-- Social -->
         <div class="footer-social">
           <h4>Connect</h4>
           <div class="social-icons">
-            <a href="https://wa.me/" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp" title="WhatsApp">
-              💬
-            </a>
-            <a href="https://facebook.com/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook" title="Facebook">
-              📘
-            </a>
+            <a href="#" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp">💬</a>
+            <a href="#" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">📘</a>
           </div>
         </div>
-
       </div>
-
       <div class="footer-bottom">
         <p>&copy; 2026 Happy Club. All Rights Reserved. Made with ❤️ &amp; ☕</p>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll to Top Button -->
-  <button id="scrollTop" aria-label="Scroll to top" title="Scroll to top">&#8679;</button>
+  <!-- Scroll To Top -->
+  <button id="scrollTop" aria-label="Scroll to top">&#8679;</button>
+
+  <!-- ============================================================
+       WHATSAPP AUTO MESSAGE MODAL
+       Opens when user clicks any WhatsApp button on a member card.
+       Shows a real WhatsApp chat-bubble preview, then opens wa.me link.
+  ============================================================ -->
+  <div id="waModal" role="dialog" aria-modal="true" aria-labelledby="waModalTitle">
+    <!-- Overlay -->
+    <div class="wa-modal-overlay" id="waModalOverlay"></div>
+
+    <!-- Box -->
+    <div class="wa-modal-box">
+
+      <!-- Green header -->
+      <div class="wa-modal-header">
+        <div id="waModalAvatar" class="wa-modal-header-fallback">?</div>
+        <div class="wa-modal-header-info">
+          <h3 id="waModalTitle">Member Name</h3>
+          <p id="waModalPhone">+977 XXXXXXXXXX</p>
+        </div>
+        <button class="wa-modal-close" id="waModalClose" aria-label="Close">&#x2715;</button>
+      </div>
+
+      <!-- Chat preview -->
+      <div class="wa-modal-body">
+        <p class="wa-modal-preview-label">📋 Message Preview</p>
+        <div class="wa-bubble">
+          <span id="waModalMsg"></span>
+          <span class="wa-bubble-meta">
+            <span id="waModalTime"></span>
+            <span style="color:#4FC3F7;font-size:0.8rem;">✓✓</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="wa-modal-footer">
+        <button class="btn btn-cancel" id="waModalCancel">✕ Cancel</button>
+        <a class="btn btn-whatsapp" id="waModalSend" href="#" target="_blank" rel="noopener noreferrer">
+          💬 Open WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </div>
 
   <!-- ============================================================
        JAVASCRIPT
@@ -1742,10 +1458,19 @@
   <script>
     'use strict';
 
-    /* ===========================================================
+    /* =============================================================
        MEMBER DATA
-       Edit this array to update all member cards on the page.
-    =========================================================== */
+       ✏️  Edit this array to update all cards instantly.
+       Fields:
+         num       – Badge number shown top-left of card
+         name      – Full name
+         listNum   – List / roll number
+         signature – Signature drink
+         phone     – WhatsApp number WITHOUT + (used in wa.me link)
+         photo     – Profile image URL (leave '' for initials fallback)
+         initials  – 2-letter fallback shown if photo fails to load
+    ============================================================= */
+
     const members = [
       {
         num:       '01',
@@ -1826,7 +1551,7 @@
         signature: 'Cold Lemon',
         phone:     '9779800000000',
         photo:     'https://www.magnific.com/free-vector/blue-circle-with-white-user_145857007.htm#fromView=keyword&page=1&position=0&uuid=c974d289-d9fb-40db-bbce-5152683b9ca8&query=Profile',
-        initials:  'KS'
+        initials:  'RS'
       },
       {
         num:       '10',
@@ -1848,170 +1573,413 @@
       }
     ];
 
-    /* ===========================================================
-       BUILD A MEMBER CARD (returns HTML string)
-    =========================================================== */
+    /* =============================================================
+       WHATSAPP MESSAGE BUILDER
+       Generates the personalised pre-filled message for each member.
+       ✏️  Edit the template here to change the message for everyone.
+    ============================================================= */
+    function buildWhatsAppMessage(memberName) {
+      return (
+        'Hi ' + memberName + ', 👋\n\n' +
+        'This is a friendly reminder from Happy Club.\n\n' +
+        'Today is your scheduled payment day for the club. ' +
+        'Please complete your contribution on time to help keep our club running smoothly.\n\n' +
+        'Thank you for your cooperation. ☕😊\n\n' +
+        '— Happy Club'
+      );
+    }
+
+    /* Build a percent-encoded wa.me URL with the pre-filled message */
+    function buildWaLink(phone, memberName) {
+      const msg = buildWhatsAppMessage(memberName);
+      return 'https://wa.me/' + phone + '?text=' + encodeURIComponent(msg);
+    }
+
+    /* =============================================================
+       BUILD MEMBER CARD HTML
+    ============================================================= */
     function buildCard(m) {
-      const waLink = `https://wa.me/${m.phone}`;
+      /* Tooltip preview (first 2 lines of message) */
+      const tooltipMsg =
+        'Hi ' + m.name + ', 👋\n' +
+        'Friendly reminder from Happy Club about your payment today.';
+
       return `
         <article class="member-card fade-in" aria-label="Member ${m.name}">
           <span class="member-number-badge"># ${m.num}</span>
+
           <div class="member-avatar-wrap">
-            <img
-              class="member-avatar"
+            <img class="member-avatar"
               src="${m.photo}"
-              alt="${m.name}"
+              alt="Photo of ${m.name}"
               loading="lazy"
               onerror="this.outerHTML='<div class=\\'avatar-fallback\\'>${m.initials}</div>'"
             />
           </div>
+
           <h3 class="member-name">${m.name}</h3>
+
           <div class="member-meta">
             <span class="meta-chip">List #${m.listNum}</span>
           </div>
+
           <p class="member-signature-label">Signature Drink</p>
           <p class="member-signature">${m.signature}</p>
+
           <div class="member-divider"></div>
-          <a
-            href="${waLink}"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-whatsapp"
-            aria-label="Contact ${m.name} on WhatsApp"
-          >
-            💬 Contact on WhatsApp
-          </a>
+
+          <!-- WhatsApp Button Wrapper -->
+          <div class="wa-btn-wrap">
+
+            <!-- Hover tooltip (desktop) -->
+            <div class="wa-tooltip" aria-hidden="true">
+              <div class="wa-tooltip-label">Auto Message Preview</div>
+              <div class="wa-tooltip-msg">${tooltipMsg}</div>
+            </div>
+
+            <!-- The button — opens modal, NOT a plain link -->
+            <button
+              class="btn-whatsapp"
+              data-name="${m.name}"
+              data-phone="${m.phone}"
+              data-photo="${m.photo}"
+              data-initials="${m.initials}"
+              onclick="openWaModal(this)"
+              aria-label="Send WhatsApp reminder to ${m.name}"
+            >
+              💬 Contact on WhatsApp
+            </button>
+
+          </div>
         </article>
       `;
     }
 
-    /* ===========================================================
-       RENDER MEMBERS
-    =========================================================== */
+    /* =============================================================
+       RENDER ALL MEMBER CARDS
+    ============================================================= */
     (function renderMembers() {
       const grid  = document.getElementById('membersGrid');
       const track = document.getElementById('sliderTrack');
       const dots  = document.getElementById('sliderDots');
 
-      members.forEach((m, i) => {
+      members.forEach(function(m, i) {
         const html = buildCard(m);
-
-        // Desktop grid
         grid.insertAdjacentHTML('beforeend', html);
-
-        // Mobile slider
         track.insertAdjacentHTML('beforeend', html);
 
-        // Dots
         const dot = document.createElement('button');
-        dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
-        dot.setAttribute('aria-label', `Go to member ${i + 1}`);
+        dot.className  = 'slider-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to member ' + (i + 1));
         dot.dataset.index = i;
         dots.appendChild(dot);
       });
     })();
 
-    /* ===========================================================
-       MOBILE SLIDER LOGIC
-    =========================================================== */
+    /* =============================================================
+       WHATSAPP MODAL — open / close
+    ============================================================= */
+    const waModal       = document.getElementById('waModal');
+    const waModalTitle  = document.getElementById('waModalTitle');
+    const waModalPhone  = document.getElementById('waModalPhone');
+    const waModalAvatar = document.getElementById('waModalAvatar');
+    const waModalMsg    = document.getElementById('waModalMsg');
+    const waModalTime   = document.getElementById('waModalTime');
+    const waModalSend   = document.getElementById('waModalSend');
+
+    /* Called by each WhatsApp button's onclick */
+    function openWaModal(btn) {
+      var name     = btn.getAttribute('data-name');
+      var phone    = btn.getAttribute('data-phone');
+      var photo    = btn.getAttribute('data-photo');
+      var initials = btn.getAttribute('data-initials');
+
+      /* Build personalised link */
+      var link = buildWaLink(phone, name);
+
+      /* Populate modal */
+      waModalTitle.textContent = name;
+      waModalPhone.textContent = '+' + phone;
+      waModalMsg.textContent   = buildWhatsAppMessage(name);
+      waModalSend.href         = link;
+
+      /* Current time for the bubble */
+      var now = new Date();
+      var hh  = String(now.getHours()).padStart(2,'0');
+      var mm  = String(now.getMinutes()).padStart(2,'0');
+      waModalTime.textContent = hh + ':' + mm;
+
+      /* Avatar */
+      if (photo) {
+        var img = document.createElement('img');
+        img.className   = 'wa-modal-header-avatar';
+        img.src         = photo;
+        img.alt         = name;
+        img.onerror     = function() {
+          waModalAvatar.className   = 'wa-modal-header-fallback';
+          waModalAvatar.textContent = initials;
+        };
+        waModalAvatar.className   = '';
+        waModalAvatar.textContent = '';
+        waModalAvatar.appendChild(img);
+      } else {
+        waModalAvatar.className   = 'wa-modal-header-fallback';
+        waModalAvatar.textContent = initials;
+      }
+
+      /* Show modal */
+      waModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+
+      /* Focus the send button for accessibility */
+      setTimeout(function(){ waModalSend.focus(); }, 260);
+    }
+
+    /* Close helpers */
+    function closeWaModal() {
+      waModal.classList.remove('open');
+      document.body.style.overflow = '';
+      /* Clear avatar to reset for next open */
+      setTimeout(function(){
+        waModalAvatar.className   = 'wa-modal-header-fallback';
+        waModalAvatar.textContent = '?';
+      }, 300);
+    }
+
+    document.getElementById('waModalClose').addEventListener('click', closeWaModal);
+    document.getElementById('waModalCancel').addEventListener('click', closeWaModal);
+    document.getElementById('waModalOverlay').addEventListener('click', closeWaModal);
+
+    /* Close on Escape key */
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && waModal.classList.contains('open')) closeWaModal();
+    });
+
+    /* "Open WhatsApp" button — close modal after brief delay so user sees it open */
+    waModalSend.addEventListener('click', function() {
+      setTimeout(closeWaModal, 400);
+    });
+
+    /* =============================================================
+       MOBILE SLIDER
+    ============================================================= */
     (function initSlider() {
-      const track   = document.getElementById('sliderTrack');
-      const prev    = document.getElementById('prevBtn');
-      const next    = document.getElementById('nextBtn');
-      const dotBtns = document.querySelectorAll('.slider-dot');
-      let current   = 0;
-      const total   = members.length;
+      var track   = document.getElementById('sliderTrack');
+      var prev    = document.getElementById('prevBtn');
+      var next    = document.getElementById('nextBtn');
+      var dotBtns = document.querySelectorAll('.slider-dot');
+      var current = 0;
+      var total   = members.length;
 
       function goTo(index) {
         current = (index + total) % total;
-        track.style.transform = `translateX(-${current * 100}%)`;
-        dotBtns.forEach((d, i) => d.classList.toggle('active', i === current));
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        dotBtns.forEach(function(d, i) { d.classList.toggle('active', i === current); });
       }
 
-      prev.addEventListener('click', () => goTo(current - 1));
-      next.addEventListener('click', () => goTo(current + 1));
-
-      dotBtns.forEach(d => {
-        d.addEventListener('click', () => goTo(+d.dataset.index));
+      prev.addEventListener('click', function() { goTo(current - 1); });
+      next.addEventListener('click', function() { goTo(current + 1); });
+      dotBtns.forEach(function(d) {
+        d.addEventListener('click', function() { goTo(+d.dataset.index); });
       });
 
-      // Touch/Swipe support
-      let startX = 0;
-      track.addEventListener('touchstart', e => {
+      /* Touch swipe */
+      var startX = 0;
+      track.addEventListener('touchstart', function(e) {
         startX = e.touches[0].clientX;
       }, { passive: true });
-
-      track.addEventListener('touchend', e => {
-        const diff = startX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 40) {
-          goTo(diff > 0 ? current + 1 : current - 1);
-        }
+      track.addEventListener('touchend', function(e) {
+        var diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
       }, { passive: true });
     })();
 
-    /* ===========================================================
-       STICKY HEADER & ACTIVE NAV
-    =========================================================== */
+    /* =============================================================
+       STICKY HEADER + ACTIVE NAV
+    ============================================================= */
     (function initHeader() {
-      const header    = document.getElementById('header');
-      const navLinks  = document.querySelectorAll('.nav-desktop a');
-      const sections  = ['home', 'team', 'features', 'rules'];
+      var header   = document.getElementById('header');
+      var navLinks = document.querySelectorAll('.nav-desktop a');
+      var sections = ['home','team','features','rules','join'];
+      var scrollBtn = document.getElementById('scrollTop');
 
-      window.addEventListener('scroll', () => {
+      window.addEventListener('scroll', function() {
         header.classList.toggle('scrolled', window.scrollY > 16);
+        scrollBtn.classList.toggle('visible', window.scrollY > 300);
 
-        // Scroll to top button
-        const btn = document.getElementById('scrollTop');
-        btn.classList.toggle('visible', window.scrollY > 300);
-
-        // Active nav link
-        let current = '';
-        sections.forEach(id => {
-          const el = document.getElementById(id);
+        var current = '';
+        sections.forEach(function(id) {
+          var el = document.getElementById(id);
           if (el && el.getBoundingClientRect().top <= 100) current = id;
         });
-        navLinks.forEach(a => {
+        navLinks.forEach(function(a) {
           a.classList.toggle('active', a.getAttribute('href') === '#' + current);
         });
       }, { passive: true });
     })();
 
-    /* ===========================================================
-       HAMBURGER MENU
-    =========================================================== */
+    /* =============================================================
+       HAMBURGER
+    ============================================================= */
     (function initHamburger() {
-      const btn = document.getElementById('hamburger');
-      const nav = document.getElementById('mobileNav');
-      const links = document.querySelectorAll('.mobile-link');
+      var btn   = document.getElementById('hamburger');
+      var nav   = document.getElementById('mobileNav');
+      var links = document.querySelectorAll('.mobile-link');
 
       function close() {
         btn.classList.remove('open');
         nav.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-expanded','false');
       }
 
-      btn.addEventListener('click', () => {
-        const isOpen = nav.classList.toggle('open');
+      btn.addEventListener('click', function() {
+        var isOpen = nav.classList.toggle('open');
         btn.classList.toggle('open', isOpen);
         btn.setAttribute('aria-expanded', String(isOpen));
       });
 
-      links.forEach(l => l.addEventListener('click', close));
+      links.forEach(function(l) { l.addEventListener('click', close); });
     })();
 
-    /* ===========================================================
+    /* =============================================================
        SCROLL TO TOP
-    =========================================================== */
-    document.getElementById('scrollTop').addEventListener('click', () => {
+    ============================================================= */
+    document.getElementById('scrollTop').addEventListener('click', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    /* ===========================================================
+    /* =============================================================
+       JOIN HAPPY CLUB — REGISTRATION FORM
+       ✏️  Change ADMIN_PHONE to your real WhatsApp number (no + sign).
+    ============================================================= */
+    var ADMIN_PHONE = '9779742483084'; // ← Replace with real admin number
+
+    /* Build the pre-filled WhatsApp registration message */
+    function buildRegistrationMessage(name, drink, phone) {
+      return (
+        '*Happy Club - New Member Registration* 🎉\n\n' +
+        'Hello Happy Club Admin,\n\n' +
+        'A new member would like to join Happy Club.\n\n' +
+        '━━━━━━━━━━━━━━━\n' +
+        '👤 *Name:* ' + name + '\n' +
+        '🍵 *Signature Drink:* ' + drink + '\n' +
+        '📞 *Contact Number:* +977 ' + phone + '\n' +
+        '━━━━━━━━━━━━━━━\n\n' +
+        'Please review this registration request and add me to Happy Club.\n\n' +
+        'Thank you! 😊☕'
+      );
+    }
+
+    /* Validate a single field, return true if valid */
+    function validateField(inputEl, wrapId, errId, checkFn) {
+      var wrap = document.getElementById(wrapId);
+      var err  = document.getElementById(errId);
+      var ok   = checkFn(inputEl.value.trim());
+      wrap.classList.toggle('error', !ok);
+      err.classList.toggle('show',  !ok);
+      return ok;
+    }
+
+    /* Live validation — clear error as soon as user types/changes */
+    (function initLiveValidation() {
+      var fieldName  = document.getElementById('fieldName');
+      var fieldDrink = document.getElementById('fieldDrink');
+      var fieldPhone = document.getElementById('fieldPhone');
+
+      if (!fieldName) return; // guard if form not in DOM
+
+      fieldName.addEventListener('input', function() {
+        if (this.value.trim().length > 0) {
+          document.getElementById('fg-name').classList.remove('error');
+          document.getElementById('err-name').classList.remove('show');
+        }
+      });
+
+      fieldDrink.addEventListener('change', function() {
+        /* Mark select visually when it has a value */
+        this.classList.toggle('has-value', this.value !== '');
+        if (this.value !== '') {
+          document.getElementById('fg-drink').classList.remove('error');
+          document.getElementById('err-drink').classList.remove('show');
+        }
+      });
+
+      fieldPhone.addEventListener('input', function() {
+        /* Allow only digits */
+        this.value = this.value.replace(/\D/g,'');
+        if (this.value.length >= 7) {
+          document.getElementById('fg-phone').classList.remove('error');
+          document.getElementById('err-phone').classList.remove('show');
+        }
+      });
+    })();
+
+    /* Form submit handler */
+    document.getElementById('joinForm') && document.getElementById('joinForm')
+      .addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var nameVal  = document.getElementById('fieldName').value.trim();
+        var drinkVal = document.getElementById('fieldDrink').value;
+        var phoneVal = document.getElementById('fieldPhone').value.trim();
+
+        /* Validate all fields */
+        var v1 = validateField(
+          document.getElementById('fieldName'),
+          'fg-name', 'err-name',
+          function(v){ return v.length >= 2; }
+        );
+        var v2 = validateField(
+          document.getElementById('fieldDrink'),
+          'fg-drink', 'err-drink',
+          function(v){ return v !== ''; }
+        );
+        /* Phone: 7–15 digits */
+        var phoneEl = document.getElementById('fieldPhone');
+        var v3ok    = /^[0-9]{7,15}$/.test(phoneVal);
+        document.getElementById('fg-phone').classList.toggle('error', !v3ok);
+        document.getElementById('err-phone').classList.toggle('show',  !v3ok);
+
+        /* If any invalid, stop and focus first error */
+        if (!v1 || !v2 || !v3ok) {
+          var firstErr = document.querySelector('.field-group.error input, .phone-wrap.error input, .field-group.error select');
+          if (firstErr) firstErr.focus();
+          return;
+        }
+
+        /* All valid — build WhatsApp link */
+        var msg  = buildRegistrationMessage(nameVal, drinkVal, phoneVal);
+        var link = 'https://wa.me/' + ADMIN_PHONE + '?text=' + encodeURIComponent(msg);
+
+        /* Show success state */
+        document.getElementById('formView').style.display    = 'none';
+        document.getElementById('successView').style.display = 'flex';
+
+        /* Open WhatsApp */
+        window.open(link, '_blank');
+      });
+
+    /* Reset form back to default state */
+    function resetJoinForm() {
+      document.getElementById('joinForm').reset();
+      document.getElementById('fieldDrink').classList.remove('has-value');
+      /* Clear all error states */
+      document.querySelectorAll('.field-group, .phone-wrap').forEach(function(el){
+        el.classList.remove('error');
+      });
+      document.querySelectorAll('.field-error').forEach(function(el){
+        el.classList.remove('show');
+      });
+      document.getElementById('formView').style.display    = '';
+      document.getElementById('successView').style.display = '';
+    }
+
+    /* =============================================================
        FADE-IN ON SCROLL (Intersection Observer)
-    =========================================================== */
+    ============================================================= */
     (function initFadeIn() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
             observer.unobserve(entry.target);
@@ -2019,14 +1987,12 @@
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-      // Observe all fade-in elements (including dynamically created ones after a tick)
       function observe() {
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
       }
 
       observe();
-      // Re-observe after member cards are rendered
-      setTimeout(observe, 50);
+      setTimeout(observe, 60); /* catch dynamically rendered cards */
     })();
 
   </script>
