@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Happy Club – A premium tea community where every cup brings people together. Join our friendly group of tea lovers." />
+  <meta name="keywords" content="Happy Club, tea group, community, friendship, tea lovers" />
+  <meta name="author" content="Happy Club" />
+  <title>Happy Club – Where Every Cup Brings People Together</title>
+  <!-- Add this line to set your tab icon -->
+  <link rel="icon" type="image/png" href="hc.png">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       CSS RESET & ROOT VARIABLES
+    ============================================================ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #FFFFFF;
+      --primary-btn: #2563EB;
+      --btn-hover: #1D4ED8;
+      --text-primary: #111111;
+      --text-secondary: #666666;
+      --border: #E5E7EB;
+      --card-bg: #FFFFFF;
+      --section-bg: #F9FAFB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,0.10), 0 4px 12px rgba(0,0,0,0.05);
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      --header-h: 72px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul { list-style: none; }
+
+    /* ============================================================
+       UTILITY CLASSES
+    ============================================================ */
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .section-alt {
+      background: var(--section-bg);
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--primary-btn);
+      background: rgba(37,99,235,0.07);
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.6rem);
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 560px;
+      line-height: 1.75;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header .section-subtitle {
+      margin: 0 auto;
+    }
+
+    /* ============================================================
+       BUTTONS
+    ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 28px;
+      border-radius: 50px;
+      font-family: var(--font);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .btn-primary {
+      background: var(--primary-btn);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(37,99,235,0.30);
+    }
+
+    .btn-primary:hover {
+      background: var(--btn-hover);
+      box-shadow: 0 6px 20px rgba(37,99,235,0.38);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-primary);
+      border: 1.5px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-outline:hover {
+      border-color: #c0c8d4;
+      background: var(--section-bg);
+      transform: translateY(-1px);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: #fff;
+      font-size: 0.875rem;
+      padding: 10px 20px;
+      box-shadow: 0 4px 14px rgba(37,211,102,0.28);
+      width: 100%;
+      justify-content: center;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1da851;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.36);
+      transform: translateY(-1px);
+    }
+
+    /* ============================================================
+       SCROLL FADE-IN ANIMATION
+    ============================================================ */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================================
+       HEADER
+    ============================================================ */
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--header-h);
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(229,231,235,0.6);
+      z-index: 1000;
+      transition: var(--transition);
+    }
+
+    #header.scrolled {
+      box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: var(--header-h);
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      object-fit: cover;
+      background: linear-gradient(135deg,#2563EB,#60a5fa);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-img img {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .logo-fallback {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg,#2563EB,#60a5fa);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    /* Desktop Nav */
+    .nav-desktop {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-desktop a {
+      position: relative;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+
+    .nav-desktop a::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 14px;
+      right: 14px;
+      height: 2px;
+      background: var(--primary-btn);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transition: transform 0.22s ease;
+    }
+
+    .nav-desktop a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-desktop a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .nav-desktop a.active {
+      color: var(--primary-btn);
+    }
+
+    .nav-desktop a.active::after {
+      transform: scaleX(1);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      transition: var(--transition);
+    }
+
+    .hamburger:hover { background: var(--section-bg); }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile Nav */
+    .nav-mobile {
+      position: fixed;
+      top: var(--header-h);
+      left: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transform: translateY(-8px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.22s ease, transform 0.22s ease;
+      z-index: 999;
+    }
+
+    .nav-mobile.open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    .nav-mobile a {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      padding: 13px 16px;
+      border-radius: 10px;
+      transition: var(--transition);
+    }
+
+    .nav-mobile a:hover {
+      color: var(--text-primary);
+      background: var(--section-bg);
+    }
+
+    /* ============================================================
+       HERO SECTION
+    ============================================================ */
+    #home {
+      padding-top: calc(var(--header-h) + 72px);
+      padding-bottom: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Decorative blobs */
+    #home::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -160px;
+      width: 560px;
+      height: 560px;
+      background: radial-gradient(circle, rgba(37,99,235,0.07) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    #home::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -120px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(96,165,250,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(37,99,235,0.06);
+      border: 1px solid rgba(37,99,235,0.15);
+      border-radius: 50px;
+      padding: 6px 16px 6px 10px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary-btn);
+      margin-bottom: 28px;
+    }
+
+    .hero-badge .dot {
+      width: 7px;
+      height: 7px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 7vw, 4.2rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      margin-bottom: 20px;
+      max-width: 760px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #2563EB 0%, #60a5fa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-tagline {
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 22px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      max-width: 620px;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 72px;
+    }
+
+    /* Stats Cards */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      width: 100%;
+      max-width: 860px;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #2563EB, #60a5fa);
+      border-radius: 3px 3px 0 0;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .stat-icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .stat-value {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.03em;
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.01em;
+    }
+
+    /* ============================================================
+       TEAM MEMBERS SECTION
+    ============================================================ */
+    #team {
+      background: var(--section-bg);
+    }
+
+    /* Desktop Grid */
+    .members-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    /* Mobile Slider */
+    .members-slider-wrap {
+      display: none;
+      position: relative;
+    }
+
+    .members-slider {
+      overflow: hidden;
+      border-radius: var(--radius-md);
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
+    }
+
+    .slider-track .member-card {
+      min-width: 100%;
+      flex-shrink: 0;
+    }
+
+    .slider-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .slider-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border);
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+      font-size: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .slider-btn:hover {
+      background: var(--primary-btn);
+      color: #fff;
+      border-color: var(--primary-btn);
+      box-shadow: 0 4px 14px rgba(37,99,235,0.28);
+    }
+
+    .slider-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .slider-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--border);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .slider-dot.active {
+      background: var(--primary-btn);
+      width: 20px;
+      border-radius: 4px;
+    }
+
+    /* Member Card */
+    .member-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 22px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .member-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .member-number-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--primary-btn);
+      background: rgba(37,99,235,0.08);
+      padding: 3px 10px;
+      border-radius: 50px;
+      letter-spacing: 0.04em;
+    }
+
+    .member-avatar-wrap {
+      position: relative;
+      margin-bottom: 16px;
+      margin-top: 8px;
+    }
+
+    .member-avatar {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.15), var(--shadow-sm);
+      background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    }
+
+    .avatar-fallback {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2563EB, #60a5fa);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #fff;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.15), var(--shadow-sm);
+    }
+
+    .member-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+
+    .member-meta {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .meta-chip {
+      font-size: 0.73rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: var(--section-bg);
+      border: 1px solid var(--border);
+      padding: 3px 10px;
+      border-radius: 50px;
+    }
+
+    .member-signature-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 3px;
+    }
+
+    .member-signature {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .member-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 16px;
+    }
+
+    /* ============================================================
+       WHATSAPP AUTO MESSAGE — MESSAGE PREVIEW TOOLTIP
+    ============================================================ */
+    .wa-btn-wrap {
+      width: 100%;
+      position: relative;
+    }
+
+    /* Preview bubble that appears above the button on hover */
+    .wa-preview {
+      position: absolute;
+      bottom: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%) translateY(6px);
+      width: 270px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.22s ease, transform 0.22s ease;
+      z-index: 50;
+      text-align: left;
+    }
+
+    .wa-preview::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 7px solid transparent;
+      border-top-color: #fff;
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.08));
+    }
+
+    .wa-btn-wrap:hover .wa-preview,
+    .wa-btn-wrap:focus-within .wa-preview {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+      pointer-events: none;
+    }
+
+    .wa-preview-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #25D366;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .wa-preview-label::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #25D366;
+    }
+
+    .wa-preview-msg {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      white-space: pre-line;
+      font-family: var(--font);
+    }
+
+    .wa-preview-msg strong {
+      color: var(--text-primary);
+    }
+
+    /* ============================================================
+       WHATSAPP MODAL (full message preview on click)
+    ============================================================ */
+    #waModal {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    #waModal.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .wa-modal-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.38);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    .wa-modal-box {
+      position: relative;
+      background: #fff;
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 440px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.18);
+      overflow: hidden;
+      transform: scale(0.94) translateY(12px);
+      transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1);
+    }
+
+    #waModal.open .wa-modal-box {
+      transform: scale(1) translateY(0);
+    }
+
+    .wa-modal-header {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      padding: 22px 24px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .wa-modal-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.2);
+      flex-shrink: 0;
+    }
+
+    .wa-modal-avatar-fallback {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.25);
+      border: 2px solid rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .wa-modal-info h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+
+    .wa-modal-info p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .wa-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .wa-modal-close:hover { background: rgba(255,255,255,0.35); }
+
+    .wa-modal-body {
+      padding: 24px;
+    }
+
+    .wa-modal-preview-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    /* Chat bubble style */
+    .wa-chat-bubble {
+      background: #DCF8C6;
+      border-radius: 16px 16px 4px 16px;
+      padding: 14px 16px;
+      font-size: 0.9rem;
+      color: #111;
+      line-height: 1.7;
+      white-space: pre-line;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    .wa-chat-bubble::after {
+      content: '✓✓';
+      position: absolute;
+      bottom: 8px;
+      right: 12px;
+      font-size: 0.65rem;
+      color: #4FC3F7;
+    }
+
+    .wa-chat-time {
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+      text-align: right;
+      margin-bottom: 20px;
+    }
+
+    .wa-modal-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .wa-modal-actions .btn {
+      flex: 1;
+      justify-content: center;
+      font-size: 0.875rem;
+      padding: 11px 16px;
+    }
+
+    .btn-cancel {
+      background: var(--section-bg);
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-cancel:hover {
+      background: var(--border);
+      color: var(--text-primary);
+      transform: translateY(-1px);
+    }
+
+    /* ============================================================
+       FEATURES SECTION
+    ============================================================ */
+    #features .features-desc {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin: 0 auto 56px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(37,99,235,0.15);
+    }
+
+    .feature-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-sm);
+      background: rgba(37,99,235,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      transition: var(--transition);
+    }
+
+    .feature-card:hover .feature-icon-wrap {
+      background: rgba(37,99,235,0.12);
+      transform: scale(1.06);
+    }
+
+    .feature-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .feature-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       RULES SECTION
+    ============================================================ */
+    #rules {
+      background: var(--section-bg);
+    }
+
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-bottom: 28px;
+    }
+
+    .rule-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 30px 28px;
+      display: flex;
+      gap: 20px;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+    }
+
+    .rule-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .rule-number {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #2563EB, #60a5fa);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+    }
+
+    .rule-content h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+
+    .rule-content p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .rules-note {
+      background: linear-gradient(135deg, rgba(37,99,235,0.05), rgba(96,165,250,0.05));
+      border: 1px solid rgba(37,99,235,0.15);
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .rules-note-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .rules-note h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--primary-btn);
+      margin-bottom: 5px;
+    }
+
+    .rules-note p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    #footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 60px 0 32px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand .logo-wrap {
+      margin-bottom: 12px;
+    }
+
+    .footer-brand .logo-text {
+      color: #fff;
+    }
+
+    .footer-tagline {
+      font-size: 0.875rem;
+      color: #64748b;
+      max-width: 220px;
+      line-height: 1.6;
+    }
+
+    .footer-nav h4 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .footer-nav ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-nav a {
+      font-size: 0.88rem;
+      color: #64748b;
+      transition: color 0.2s;
+    }
+
+    .footer-nav a:hover { color: #e2e8f0; }
+
+    .footer-social h4 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .social-icon:hover {
+      background: rgba(37,99,235,0.2);
+      border-color: rgba(37,99,235,0.4);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #475569;
+    }
+
+    /* ============================================================
+       SCROLL TO TOP
+    ============================================================ */
+    #scrollTop {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--primary-btn);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 18px rgba(37,99,235,0.35);
+      opacity: 0;
+      transform: translateY(14px);
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      z-index: 998;
+    }
+
+    #scrollTop.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    #scrollTop:hover {
+      background: var(--btn-hover);
+      transform: translateY(-2px);
+    }
+
+    /* ============================================================
+       RESPONSIVE DESIGN
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .members-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root { --header-h: 64px; }
+
+      .section { padding: 70px 0; }
+
+      .nav-desktop { display: none; }
+      .hamburger { display: flex; }
+
+      #home {
+        padding-top: calc(var(--header-h) + 48px);
+        padding-bottom: 60px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+      }
+
+      /* Show slider, hide grid on mobile */
+      .members-grid { display: none; }
+      .members-slider-wrap { display: block; }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rules-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .rule-card {
+        padding: 22px 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 18px; }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .stat-card {
+        padding: 22px 14px;
+      }
+
+      .stat-value { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header id="header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+
+        <!-- Logo -->
+       <!-- Logo -->
+<a href="#home" class="logo-wrap" aria-label="Happy Club Home">
+  <div class="logo-img" id="logoWrap">
+    <!-- logo.png loads here; fallback shown if missing -->
+    <img
+      src="hc.png"
+      alt="Happy Club Logo"
+      loading="lazy"
+      onerror="this.outerHTML='<div class=\'logo-fallback\'>H</div>'"
+    />
+  </div>
+  <span class="logo-text">Happy Club</span>
+</a>
+
+        <!-- Desktop Nav -->
+        <nav class="nav-desktop" role="navigation" aria-label="Primary navigation">
+          <a href="#home">Home</a>
+          <a href="#team">Team Members</a>
+          <a href="#features">Features</a>
+          <a href="#rules">Rules</a>
+        </nav>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav class="nav-mobile" id="mobileNav" role="navigation" aria-label="Mobile navigation">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#team" class="mobile-link">Team Members</a>
+      <a href="#features" class="mobile-link">Features</a>
+      <a href="#rules" class="mobile-link">Rules</a>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section id="home" aria-labelledby="heroHeading">
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="hero-badge fade-in">
+          <span class="dot"></span>
+          Now welcoming new members
+        </div>
+
+        <h1 class="hero-title fade-in" id="heroHeading">
+          Welcome to <span>Happy Club</span>
+        </h1>
+
+        <p class="hero-tagline fade-in">Where Every Cup Brings People Together.</p>
+
+        <p class="hero-description fade-in">
+          Happy Club is more than just a tea group. It is a place where friends gather to relax, share laughter,
+          enjoy meaningful conversations, and create unforgettable memories. Whether it's a hot cup of tea or a
+          refreshing cold lemon drink, every moment is filled with friendship, happiness, and positive energy.
+        </p>
+
+        <div class="hero-buttons fade-in">
+          <a href="#team" class="btn btn-primary">
+            <span>☕</span> Meet Our Team
+          </a>
+          <a href="#features" class="btn btn-outline">
+            <span>✨</span> Join the Club
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+          <div class="stat-card fade-in">
+            <div class="stat-icon">👥</div>
+            <div class="stat-value">11</div>
+            <div class="stat-label">Members</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-icon">🍵</div>
+            <div class="stat-value">Daily</div>
+            <div class="stat-label">Tea Time</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-icon">😊</div>
+            <div class="stat-value">∞</div>
+            <div class="stat-label">Unlimited Smiles</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-icon">🤝</div>
+            <div class="stat-value">100%</div>
+            <div class="stat-label">Friendship</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TEAM MEMBERS SECTION
+  ============================================================ -->
+  <section id="team" class="section" aria-labelledby="teamHeading">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-label fade-in">Our People</span>
+        <h2 class="section-title fade-in" id="teamHeading">Our Happy Club Team</h2>
+        <p class="section-subtitle fade-in">Meet the wonderful people who make Happy Club special.</p>
+      </div>
+
+      <!--
+        =====================================================
+        MEMBER DATA — Easy to edit!
+        Each member object:
+          num       : Member number (display badge)
+          name      : Full name
+          listNum   : List number
+          signature : Signature / nickname
+          phone     : WhatsApp number (no + sign for wa.me link)
+          photo     : URL to profile photo (use '' for initials fallback)
+          initials  : Fallback initials shown if photo fails
+        =====================================================
+      -->
+
+      <!-- DESKTOP GRID -->
+      <div class="members-grid" id="membersGrid">
+        <!-- Cards injected by JS -->
+      </div>
+
+      <!-- MOBILE SLIDER -->
+      <div class="members-slider-wrap" id="sliderWrap">
+        <div class="members-slider">
+          <div class="slider-track" id="sliderTrack">
+            <!-- Cards injected by JS -->
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="prevBtn" aria-label="Previous member">&#8592;</button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn" id="nextBtn" aria-label="Next member">&#8594;</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURES SECTION
+  ============================================================ -->
+  <section id="features" class="section" aria-labelledby="featuresHeading">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-label fade-in">Why Us</span>
+        <h2 class="section-title fade-in" id="featuresHeading">Why Happy Club?</h2>
+      </div>
+
+      <p class="features-desc fade-in">
+        Happy Club is a place where people leave behind stress, worries, and the pressures of everyday life.
+        It is a welcoming space to relax, enjoy tea or cold lemon drinks, share meaningful conversations,
+        laugh together, play fun games, and spend quality time with friends. Every gathering creates stronger
+        friendships, positive memories, and lasting happiness.
+      </p>
+
+      <div class="features-grid">
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon-wrap">🍵</div>
+          <h3 class="feature-title">Tea &amp; Cold Lemon Time</h3>
+          <p class="feature-desc">Enjoy your favorite drinks together in a relaxed and welcoming atmosphere.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon-wrap">🌿</div>
+          <h3 class="feature-title">Stress-Free Environment</h3>
+          <p class="feature-desc">Relax, refresh your mind, and leave your daily worries at the door.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon-wrap">🎮</div>
+          <h3 class="feature-title">Fun Games</h3>
+          <p class="feature-desc">Enjoy entertaining games together that bring laughter and friendly competition.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon-wrap">🤝</div>
+          <h3 class="feature-title">Strong Friendship</h3>
+          <p class="feature-desc">Build trust, deepen bonds, and form lasting relationships that go beyond the club.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon-wrap">😄</div>
+          <h3 class="feature-title">Laughter &amp; Memories</h3>
+          <p class="feature-desc">Share smiles, create unforgettable moments, and treasure every gathering.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon-wrap">💙</div>
+          <h3 class="feature-title">Positive Community</h3>
+          <p class="feature-desc">A community built on respect, kindness, unity, and genuine care for one another.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RULES SECTION
+  ============================================================ -->
+  <section id="rules" class="section section-alt" aria-labelledby="rulesHeading">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-label fade-in">Guidelines</span>
+        <h2 class="section-title fade-in" id="rulesHeading">Happy Club Rules</h2>
+        <p class="section-subtitle fade-in">Every member is expected to follow these rules.</p>
+      </div>
+
+      <div class="rules-grid">
+
+        <div class="rule-card fade-in">
+          <div class="rule-number">1</div>
+          <div class="rule-content">
+            <h3>Registration Required</h3>
+            <p>Every new member must register by providing their name, a short introduction, signature, and thumbprint.</p>
+          </div>
+        </div>
+
+        <div class="rule-card fade-in">
+          <div class="rule-number">2</div>
+          <div class="rule-content">
+            <h3>Active Participation</h3>
+            <p>Every member should actively participate and maintain regular attendance at club gatherings.</p>
+          </div>
+        </div>
+
+        <div class="rule-card fade-in">
+          <div class="rule-number">3</div>
+          <div class="rule-content">
+            <h3>Timely Contributions</h3>
+            <p>Each member must pay their assigned contribution on time. Repeated excuses for payment are not acceptable. Everyone is expected to respect and follow the club rules.</p>
+          </div>
+        </div>
+
+        <div class="rule-card fade-in">
+          <div class="rule-number">4</div>
+          <div class="rule-content">
+            <h3>Late Payment Fine</h3>
+            <p>If a member fails to pay their contribution on their assigned turn, they must pay an additional fine equal to two days of tea expenses.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Important Note -->
+      <div class="rules-note fade-in">
+        <div class="rules-note-icon">📌</div>
+        <div>
+          <h4>Important Note</h4>
+          <p>Each member's payment turn comes twice every month. Paying on your assigned turn is mandatory. Regular and on-time payments keep the club running smoothly for everyone.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#home" class="logo-wrap" aria-label="Happy Club Home">
+            <div class="logo-img">
+              <img
+                src="hc.png"
+                alt="Happy Club Logo"
+                loading="lazy"
+                onerror="this.parentElement.innerHTML='<div class=\'logo-fallback\'>H</div>'"
+              />
+            </div>
+            <span class="logo-text">Happy Club</span>
+          </a>
+          <p class="footer-tagline">Built with Friendship &amp; Tea ☕</p>
+        </div>
+
+        <!-- Nav Links -->
+        <div class="footer-nav">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#team">Team Members</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#rules">Rules</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="social-icons">
+            <a href="https://wa.me/" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp" title="WhatsApp">
+              💬
+            </a>
+            <a href="https://facebook.com/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook" title="Facebook">
+              📘
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Happy Club. All Rights Reserved. Made with ❤️ &amp; ☕</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTop" aria-label="Scroll to top" title="Scroll to top">&#8679;</button>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    'use strict';
+
+    /* ===========================================================
+       MEMBER DATA
+       Edit this array to update all member cards on the page.
+    =========================================================== */
+    const members = [
+      {
+        num:       '01',
+        name:      'Nabin Khadka',
+        listNum:   '01',
+        signature: 'Milk Tea',
+        phone:     '9779742483084',
+        photo:     'https://www.magnific.com/free-photos-vectors/user-circle',
+        initials:  'NK'
+      },
+      {
+        num:       '02',
+        name:      'Sushan Shrestha',
+        listNum:   '02',
+        signature: 'Cold Lemon',
+        phone:     '9779867239997',
+        photo:     'https://www.magnific.com/free-vector/blue-circle-with-white-user_145857007.htm#fromView=keyword&page=1&position=0&uuid=c974d289-d9fb-40db-bbce-5152683b9ca8&query=Profile',
+        initials:  'SS'
+      },
+      {
+        num:       '03',
+        name:      'Samir Luintel',
+        listNum:   '03',
+        signature: 'Milk Tea',
+        phone:     '9779763410012',
+        photo:     'https://www.magnific.com/free-vector/blue-circle-with-white-user_145857007.htm#fromView=keyword&page=1&position=0&uuid=c974d289-d9fb-40db-bbce-5152683b9ca8&query=Profile',
+        initials:  'SL'
+      },
+      {
+        num:       '04',
+        name:      'Rajeep Sujakhu',
+        listNum:   '04',
+        signature: 'Cold Lemon',
+        phone:     '9779861553670',
+        photo:     'https://www.magnific.com/free-vector/blue-circle-with-white-user_145857007.htm#fromView=keyword&page=1&position=0&uuid=c974d289-d9fb-40db-bbce-5152683b9ca8&query=Profile',
+        initials:  'RS'
+      },
+      {
+        num:       '05',
+        name:      'Yagya Bdr Karki',
+        listNum:   '05',
+        signature: 'Cold Lemon',
+        phone:     '9779803623831',
+        photo:     'https://www.magnific.com/free-vector/blue-circle-with-white-user_145857007.htm#fromView=keyword&page=1&position=0&uuid=c974d289-d9fb-40db-bbce-5152683b9ca8&query=Profile',
+        initials:  'YBK'
+      },
+      {
+        num:       '06',
+        name:      'Aashraya Pokhrel',
+        listNum:   '06',
+        signature: 'Cold Lemon',
+        phone:     '9779860453614',
+        photo:     'https://www.magnific.com/free-vector/blue-circle-with-white-user_145857007.htm#fromView=keyword&page=1&position=0&uuid=c974d289-d9fb-40db-bbce-5152683b9ca8&query=Profile',
+        initials:  'AP'
+      },
+      {
+        num:       '07',
+        name:      'Shishir Dahal',
+        listNum:   '07',
+        signature: 'Cold Lemon',
+        phone:     '97798013876767',
+        photo:     'https://www.magnific.com/free-vector/blue-circle-with-white-user_145857007.htm#fromView=keyword&page=1&position=0&uuid=c974d289-d9fb-40db-bbce-5152683b9ca8&query=Profile',
+        initials:  'SD'
+      },
+      {
+        num:       '08',
+        name:      'Kushal Pathak',
+        listNum:   '08',
+        signature: 'Cold Lemon/Milk Tea',
+        phone:     '9779840271850',
+        photo:     'https://www.magnific.com/free-vector/blue-circle-with-white-user_145857007.htm#fromView=keyword&page=1&position=0&uuid=c974d289-d9fb-40db-bbce-5152683b9ca8&query=Profile',
+        initials:  'KP'
+      },
+      {
+        num:       '09',
+        name:      'Rojen Shrestha',
+        listNum:   '09',
+        signature: 'Cold Lemon',
+        phone:     '9779800000000',
+        photo:     'https://www.magnific.com/free-vector/blue-circle-with-white-user_145857007.htm#fromView=keyword&page=1&position=0&uuid=c974d289-d9fb-40db-bbce-5152683b9ca8&query=Profile',
+        initials:  'KS'
+      },
+      {
+        num:       '10',
+        name:      'Biraj Pujari',
+        listNum:   '10',
+        signature: 'Tulsi Tea',
+        phone:     '9779808767133',
+        photo:     'https://www.magnific.com/free-vector/blue-circle-with-white-user_145857007.htm#fromView=keyword&page=1&position=0&uuid=c974d289-d9fb-40db-bbce-5152683b9ca8&query=Profile',
+        initials:  'BP'
+      },
+      {
+        num:       '11',
+        name:      'Bibek Khatiwoda',
+        listNum:   '11',
+        signature: 'Cold Lemon',
+        phone:     '9779860411440',
+        photo:     'https://www.magnific.com/free-vector/blue-circle-with-white-user_145857007.htm#fromView=keyword&page=1&position=0&uuid=c974d289-d9fb-40db-bbce-5152683b9ca8&query=Profile',
+        initials:  'BK'
+      }
+    ];
+
+    /* ===========================================================
+       BUILD A MEMBER CARD (returns HTML string)
+    =========================================================== */
+    function buildCard(m) {
+      const waLink = `https://wa.me/${m.phone}`;
+      return `
+        <article class="member-card fade-in" aria-label="Member ${m.name}">
+          <span class="member-number-badge"># ${m.num}</span>
+          <div class="member-avatar-wrap">
+            <img
+              class="member-avatar"
+              src="${m.photo}"
+              alt="${m.name}"
+              loading="lazy"
+              onerror="this.outerHTML='<div class=\\'avatar-fallback\\'>${m.initials}</div>'"
+            />
+          </div>
+          <h3 class="member-name">${m.name}</h3>
+          <div class="member-meta">
+            <span class="meta-chip">List #${m.listNum}</span>
+          </div>
+          <p class="member-signature-label">Signature Drink</p>
+          <p class="member-signature">${m.signature}</p>
+          <div class="member-divider"></div>
+          <a
+            href="${waLink}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp"
+            aria-label="Contact ${m.name} on WhatsApp"
+          >
+            💬 Contact on WhatsApp
+          </a>
+        </article>
+      `;
+    }
+
+    /* ===========================================================
+       RENDER MEMBERS
+    =========================================================== */
+    (function renderMembers() {
+      const grid  = document.getElementById('membersGrid');
+      const track = document.getElementById('sliderTrack');
+      const dots  = document.getElementById('sliderDots');
+
+      members.forEach((m, i) => {
+        const html = buildCard(m);
+
+        // Desktop grid
+        grid.insertAdjacentHTML('beforeend', html);
+
+        // Mobile slider
+        track.insertAdjacentHTML('beforeend', html);
+
+        // Dots
+        const dot = document.createElement('button');
+        dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Go to member ${i + 1}`);
+        dot.dataset.index = i;
+        dots.appendChild(dot);
+      });
+    })();
+
+    /* ===========================================================
+       MOBILE SLIDER LOGIC
+    =========================================================== */
+    (function initSlider() {
+      const track   = document.getElementById('sliderTrack');
+      const prev    = document.getElementById('prevBtn');
+      const next    = document.getElementById('nextBtn');
+      const dotBtns = document.querySelectorAll('.slider-dot');
+      let current   = 0;
+      const total   = members.length;
+
+      function goTo(index) {
+        current = (index + total) % total;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dotBtns.forEach((d, i) => d.classList.toggle('active', i === current));
+      }
+
+      prev.addEventListener('click', () => goTo(current - 1));
+      next.addEventListener('click', () => goTo(current + 1));
+
+      dotBtns.forEach(d => {
+        d.addEventListener('click', () => goTo(+d.dataset.index));
+      });
+
+      // Touch/Swipe support
+      let startX = 0;
+      track.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+
+      track.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) {
+          goTo(diff > 0 ? current + 1 : current - 1);
+        }
+      }, { passive: true });
+    })();
+
+    /* ===========================================================
+       STICKY HEADER & ACTIVE NAV
+    =========================================================== */
+    (function initHeader() {
+      const header    = document.getElementById('header');
+      const navLinks  = document.querySelectorAll('.nav-desktop a');
+      const sections  = ['home', 'team', 'features', 'rules'];
+
+      window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 16);
+
+        // Scroll to top button
+        const btn = document.getElementById('scrollTop');
+        btn.classList.toggle('visible', window.scrollY > 300);
+
+        // Active nav link
+        let current = '';
+        sections.forEach(id => {
+          const el = document.getElementById(id);
+          if (el && el.getBoundingClientRect().top <= 100) current = id;
+        });
+        navLinks.forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+        });
+      }, { passive: true });
+    })();
+
+    /* ===========================================================
+       HAMBURGER MENU
+    =========================================================== */
+    (function initHamburger() {
+      const btn = document.getElementById('hamburger');
+      const nav = document.getElementById('mobileNav');
+      const links = document.querySelectorAll('.mobile-link');
+
+      function close() {
+        btn.classList.remove('open');
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        btn.classList.toggle('open', isOpen);
+        btn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      links.forEach(l => l.addEventListener('click', close));
+    })();
+
+    /* ===========================================================
+       SCROLL TO TOP
+    =========================================================== */
+    document.getElementById('scrollTop').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ===========================================================
+       FADE-IN ON SCROLL (Intersection Observer)
+    =========================================================== */
+    (function initFadeIn() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      // Observe all fade-in elements (including dynamically created ones after a tick)
+      function observe() {
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+      }
+
+      observe();
+      // Re-observe after member cards are rendered
+      setTimeout(observe, 50);
+    })();
+
+  </script>
+</body>
+</html>
